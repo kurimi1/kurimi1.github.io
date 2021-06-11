@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>教程 | My Blog</title>
+    <title>教程 | Donald Blog</title>
     <link>/category/%E6%95%99%E7%A8%8B/</link>
       <atom:link href="/category/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <description>教程</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 13 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 11 Jun 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>教程</title>
       <link>/category/%E6%95%99%E7%A8%8B/</link>
     </image>
+    
+    <item>
+      <title>使用helm安装harbor</title>
+      <link>/post/harbor/</link>
+      <pubDate>Fri, 11 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/post/harbor/</guid>
+      <description>&lt;h2 id=&#34;helm下载harbor&#34;&gt;helm下载harbor&lt;/h2&gt;
+&lt;p&gt;helm repo add harbor &lt;a href=&#34;https://helm.goharbor.io&#34;&gt;https://helm.goharbor.io&lt;/a&gt;
+helm fetch harbor/harbor &amp;ndash;untar
+helm pull harbor/harbor&lt;/p&gt;
+&lt;h2 id=&#34;配置主要地方&#34;&gt;配置（主要地方）&lt;/h2&gt;
+&lt;p&gt;编辑values.yaml&lt;/p&gt;
+&lt;h3 id=&#34;服务方式坑点&#34;&gt;服务方式坑点&lt;/h3&gt;
+&lt;p&gt;服务方式：ingress,nodePort
+选择ingress需要配置域名服务器，否则需要配置每台机器的hosts。
+最主要的是！！！drone ci 的docker plugins无法配置hosts
+因此强烈建议内网部署采用nodePort方式&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;type: nodePort&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;http-or-https-坑点&#34;&gt;http or https 坑点&lt;/h3&gt;
+&lt;p&gt;使用nodeport无法使用https,登录会报证书无法验证&lt;/p&gt;
+&lt;h3 id=&#34;externalurl&#34;&gt;externalURL&lt;/h3&gt;
+&lt;p&gt;协议：//ip：端口&lt;/p&gt;
+&lt;h3 id=&#34;pvc配置&#34;&gt;pvc配置&lt;/h3&gt;
+&lt;p&gt;提供storageClass即可&lt;/p&gt;
+&lt;h2 id=&#34;配置docker-http登录&#34;&gt;配置docker http登录&lt;/h2&gt;
+&lt;p&gt;vim /etc/docker/daemon.json&lt;/p&gt;
+&lt;p&gt;添加haobor地址&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;insecure-registries&amp;rdquo;: [&amp;ldquo;10.67.15.211:30005&amp;rdquo;]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;systemctl daemon-reload&lt;/p&gt;
+&lt;p&gt;systemctl restart docker&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Welcome to Wowchemy, the website builder for Hugo</title>

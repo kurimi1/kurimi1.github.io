@@ -1,7 +1,7 @@
 {
-  "name": "My Blog",
-  "short_name": "My Blog",
-  "lang": "en-us",
+  "name": "Donald Blog",
+  "short_name": "Donald Blog",
+  "lang": "zh-Hans",
   "theme_color": "#2962ff",
   "background_color": "#2962ff",
   "icons": [{
