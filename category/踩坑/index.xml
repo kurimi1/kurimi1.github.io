@@ -27,12 +27,22 @@ helm pull harbor/harbor&lt;/p&gt;
 &lt;p&gt;服务方式：ingress,nodePort
 选择ingress需要配置域名服务器，否则需要配置每台机器的hosts。
 最主要的是！！！drone ci 的docker plugins无法配置hosts
-因此强烈建议内网部署采用nodePort方式&lt;/p&gt;
+因此强烈建议内网部署采用nodePort方式()&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;type: nodePort&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;http-or-https-坑点&#34;&gt;http or https 坑点&lt;/h3&gt;
 &lt;p&gt;使用nodeport无法使用https,登录会报证书无法验证&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;x509: cannot validate certificate for 10.67.15.211 because it doesn&amp;rsquo;t contain any IP SANs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;k8s登录坑点&#34;&gt;k8s登录坑点&lt;/h3&gt;
+&lt;p&gt;因为是自签证书所以所有节点的docker都要配置insecure-registries,否则无法pull镜像,ingress方式或nodeport都需要配置
+for example：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;insecure-registries&amp;rdquo;: [&amp;ldquo;harbor.com&amp;rdquo;, &amp;ldquo;10.67.15.211:30003&amp;rdquo;]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;docker默认配置针对127.0.0.0/8本地回环地址不验证，但还有10.0.0.0/8这个内网&lt;/p&gt;
 &lt;h3 id=&#34;externalurl&#34;&gt;externalURL&lt;/h3&gt;
 &lt;p&gt;协议：//ip：端口&lt;/p&gt;
 &lt;h3 id=&#34;pvc配置&#34;&gt;pvc配置&lt;/h3&gt;
