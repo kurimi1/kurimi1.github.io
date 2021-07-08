@@ -30,13 +30,10 @@
   
     
   
-  <meta name="description" content="x509: cannot validate certificate for x.x.x.x because it doesn&rsquo;t contain any IP SANs 解决方法 这种问题通常出现在ip使用https时(k8s自动生成证书)。因为k8s生成的证书的Subject Alternative Name都是DNS解析的，所以使用nodeport发布服务时node的ip地址不在验证域中，解决方法有两种
-1：客户端取消证书验证 例如docker 使用insecure-registries配置
-2：重新生成服务端证书 自签证书被某些客户端 || sdk无法验证，只能采用第一种方式
-查看证书（公钥）命令 openssl x509 -in ./public.crt -noout -text" />
+  <meta name="description" content="静态blog" />
 
   
-  <link rel="alternate" hreflang="zh-Hans" href="/post/https-verify/" />
+  <link rel="alternate" hreflang="zh-Hans" href="/post/hugo/" />
 
   
 
@@ -274,7 +271,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
 
-  <link rel="canonical" href="/post/https-verify/" />
+  <link rel="canonical" href="/post/hugo/" />
 
   
   
@@ -291,12 +288,9 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Donald Blog" />
-  <meta property="og:url" content="/post/https-verify/" />
-  <meta property="og:title" content="关于使用https的坑 | Donald Blog" />
-  <meta property="og:description" content="x509: cannot validate certificate for x.x.x.x because it doesn&rsquo;t contain any IP SANs 解决方法 这种问题通常出现在ip使用https时(k8s自动生成证书)。因为k8s生成的证书的Subject Alternative Name都是DNS解析的，所以使用nodeport发布服务时node的ip地址不在验证域中，解决方法有两种
-1：客户端取消证书验证 例如docker 使用insecure-registries配置
-2：重新生成服务端证书 自签证书被某些客户端 || sdk无法验证，只能采用第一种方式
-查看证书（公钥）命令 openssl x509 -in ./public.crt -noout -text" /><meta property="og:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:url" content="/post/hugo/" />
+  <meta property="og:title" content="hugo note | Donald Blog" />
+  <meta property="og:description" content="静态blog" /><meta property="og:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="zh-Hans" />
   
     
@@ -329,9 +323,9 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/post/https-verify/"
+    "@id": "/post/hugo/"
   },
-  "headline": "关于使用https的坑",
+  "headline": "hugo note",
   
   "datePublished": "2021-07-07T00:00:00Z",
   "dateModified": "2021-07-07T00:00:00Z",
@@ -349,7 +343,7 @@
       "url": "/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "x509: cannot validate certificate for x.x.x.x because it doesn\u0026rsquo;t contain any IP SANs 解决方法 这种问题通常出现在ip使用https时(k8s自动生成证书)。因为k8s生成的证书的Subject Alternative Name都是DNS解析的，所以使用nodeport发布服务时node的ip地址不在验证域中，解决方法有两种\n1：客户端取消证书验证 例如docker 使用insecure-registries配置\n2：重新生成服务端证书 自签证书被某些客户端 || sdk无法验证，只能采用第一种方式\n查看证书（公钥）命令 openssl x509 -in ./public.crt -noout -text"
+  "description": "静态blog"
 }
 </script>
 
@@ -365,11 +359,11 @@
 
 
 
-  <title>关于使用https的坑 | Donald Blog</title>
+  <title>hugo note | Donald Blog</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="de4969fc695906a8675fafa789b5e8d5" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="1ba1da42e133e1a006844b4b012bf188" >
 
   
   
@@ -588,7 +582,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>关于使用https的坑</h1>
+  <h1>hugo note</h1>
 
   
 
@@ -641,7 +635,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/%E9%83%A8%E7%BD%B2/">部署</a>, <a href="/category/%E8%B8%A9%E5%9D%91/">踩坑</a>, <a href="/category/%E7%AC%94%E8%AE%B0/">笔记</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/category/hugo/">hugo</a>, <a href="/category/blog/">blog</a>, <a href="/category/%E7%AC%94%E8%AE%B0/">笔记</a></span>
   
 
 </div>
@@ -660,37 +654,12 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="x509-cannot-validate-certificate-for-xxxx-because-it-doesnt-contain-any-ip-sans-解决方法">x509: cannot validate certificate for x.x.x.x because it doesn&rsquo;t contain any IP SANs 解决方法</h2>
-<p>这种问题通常出现在ip使用https时(k8s自动生成证书)。因为k8s生成的证书的Subject Alternative Name都是DNS解析的，所以使用nodeport发布服务时node的ip地址不在验证域中，解决方法有两种</p>
-<h3 id="1客户端取消证书验证">1：客户端取消证书验证</h3>
-<p>例如docker 使用insecure-registries配置</p>
-<h3 id="2重新生成服务端证书">2：重新生成服务端证书</h3>
-<p>自签证书被某些客户端 || sdk无法验证，只能采用第一种方式</p>
-<h4 id="查看证书公钥命令">查看证书（公钥）命令</h4>
-<p>openssl x509 -in ./public.crt -noout -text</p>
-<hr>
-<p>在Subject Alternative Name中添加ip</p>
-<h4 id="创建一个以opensslconf以下内容命名的文件设置ip1和或dns1指向正确的-ipdns-地址">创建一个以openssl.conf以下内容命名的文件。设置IP.1和/或DNS.1指向正确的 IP/DNS 地址</h4>
-<p>[req]
-distinguished_name = req_distinguished_name
-x509_extensions = v3_req
-prompt = no</p>
-<p>[req_distinguished_name]
-C = US
-ST = VA
-L = Somewhere
-O = MyOrg
-OU = MyOU
-CN = MyServerName</p>
-<p>[v3_req]
-subjectAltName = @alt_names</p>
-<p>[alt_names]
-IP.1 = 127.0.0.1
-DNS.1 = localhost</p>
-<p>IP地址不能使用CIDR格式，必须指定到ip</p>
-<h4 id="openssl通过指定配置文件运行并在出现提示时输入密码">openssl通过指定配置文件运行并在出现提示时输入密码</h4>
-<p>openssl req -new -x509 -nodes -days 730 -key private.key -out public.crt -config openssl.conf</p>
-<p>修改完证书后需要重启</p>
+      <h2 id="本地预览命令">本地预览命令</h2>
+<p>hugo server &ndash;bind 0.0.0.0 -D</p>
+<h2 id="编译命令">编译命令</h2>
+<p>hugo -D</p>
+<h2 id="发布">发布</h2>
+<p>push 到 github</p>
 
     </div>
 
@@ -703,9 +672,9 @@ DNS.1 = localhost</p>
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/%E8%AF%81%E4%B9%A6/">证书</a>
+  <a class="badge badge-light" href="/tag/hugo/">hugo</a>
   
-  <a class="badge badge-light" href="/tag/https/">https</a>
+  <a class="badge badge-light" href="/tag/blog/">blog</a>
   
 </div>
 
@@ -722,7 +691,7 @@ DNS.1 = localhost</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/https-verify/&amp;text=%e5%85%b3%e4%ba%8e%e4%bd%bf%e7%94%a8https%e7%9a%84%e5%9d%91" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/hugo/&amp;text=hugo%20note" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -735,7 +704,7 @@ DNS.1 = localhost</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/https-verify/&amp;t=%e5%85%b3%e4%ba%8e%e4%bd%bf%e7%94%a8https%e7%9a%84%e5%9d%91" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/hugo/&amp;t=hugo%20note" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -748,7 +717,7 @@ DNS.1 = localhost</p>
       
       
       <li>
-        <a href="mailto:?subject=%e5%85%b3%e4%ba%8e%e4%bd%bf%e7%94%a8https%e7%9a%84%e5%9d%91&amp;body=/post/https-verify/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=hugo%20note&amp;body=/post/hugo/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -761,7 +730,7 @@ DNS.1 = localhost</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/https-verify/&amp;title=%e5%85%b3%e4%ba%8e%e4%bd%bf%e7%94%a8https%e7%9a%84%e5%9d%91" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/hugo/&amp;title=hugo%20note" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -774,7 +743,7 @@ DNS.1 = localhost</p>
       
       
       <li>
-        <a href="whatsapp://send?text=%e5%85%b3%e4%ba%8e%e4%bd%bf%e7%94%a8https%e7%9a%84%e5%9d%91%20/post/https-verify/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=hugo%20note%20/post/hugo/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -787,7 +756,7 @@ DNS.1 = localhost</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/https-verify/&amp;title=%e5%85%b3%e4%ba%8e%e4%bd%bf%e7%94%a8https%e7%9a%84%e5%9d%91" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/hugo/&amp;title=hugo%20note" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -886,15 +855,8 @@ DNS.1 = localhost</p>
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">下一页</div>
-    <a href="/post/hugo/" rel="next">hugo note</a>
-  </div>
-  
-  
-  
-  <div class="post-nav-item">
     <div class="meta-nav">上一页</div>
-    <a href="/post/go-zero/" rel="prev">go-zero note</a>
+    <a href="/post/https-verify/" rel="prev">关于使用https的坑</a>
   </div>
   
 </div>
@@ -906,19 +868,6 @@ DNS.1 = localhost</p>
 
 
   
-  
-  <div class="article-widget content-widget-hr">
-    <h3>相关</h3>
-    <ul>
-      
-      <li><a href="/post/go-zero/">go-zero note</a></li>
-      
-      <li><a href="/post/protobuf/">protobuf note</a></li>
-      
-      <li><a href="/post/mysql/">mysql</a></li>
-      
-    </ul>
-  </div>
   
 
 
