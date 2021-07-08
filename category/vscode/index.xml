@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vscode | Donald Blog</title>
+    <link>/category/vscode/</link>
+      <atom:link href="/category/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <description>vscode</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 21 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>vscode</title>
+      <link>/category/vscode/</link>
+    </image>
+    
+    <item>
+      <title>vscode设置proto插件</title>
+      <link>/post/set-vscode-proto-plugin/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/post/set-vscode-proto-plugin/</guid>
+      <description>&lt;h2 id=&#34;安装插件&#34;&gt;安装插件&lt;/h2&gt;
+&lt;p&gt;搜索安装这两个插件，第一个插件会调用第二个插件进行格式化&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vscode-proto3&lt;/li&gt;
+&lt;li&gt;clang-format&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;插件配置&#34;&gt;插件配置&lt;/h2&gt;
+&lt;p&gt;&amp;ldquo;clang-format.style&amp;rdquo;: &amp;ldquo;google&amp;rdquo;
+&amp;ldquo;clang-format.style&amp;rdquo;: &amp;ldquo;{ IndentWidth: 4, BasedOnStyle: google, AlignConsecutiveAssignments: true }&amp;rdquo;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

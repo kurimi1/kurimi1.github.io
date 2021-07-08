@@ -296,7 +296,7 @@
     <meta property="twitter:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="zh-Hans" />
   
     
-      <meta property="og:updated_time" content="2021-06-11T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2021-07-07T00:00:00&#43;00:00" />
     
   
 
@@ -548,6 +548,57 @@
   
 
   
+  
+    
+    
+    
+    <div>
+      <h2><a href="/post/https-verify/" >关于使用https的坑</a></h2>
+      <div class="article-style">
+        
+          x509: cannot validate certificate for x.x.x.x because it doesn&rsquo;t contain any IP SANs 解决方法 这种问题通常出现在ip使用https时(k8s自动生成证书)。因为k8s生成的证书的Subject Alternative Name都是DNS解析的，所以使用nodeport发布服务时node的ip地址不在验证域中，解决方法有两种
+1：客户端取消证书验证 例如docker 使用insecure-registries配置
+2：重新生成服务端证书 自签证书被某些客户端 || sdk无法验证，只能采用第一种方式
+查看证书（公钥）命令 openssl x509 -in ./public.crt -noout -text
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/post/go-zero/" >go-zero note</a></h2>
+      <div class="article-style">
+        
+          go-zero 笔记
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/post/protobuf/" >protobuf note</a></h2>
+      <div class="article-style">
+        
+          protobuf 笔记
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/post/mysql/" >mysql</a></h2>
+      <div class="article-style">
+        
+          mysql 笔记
+        
+      </div>
+    </div>
   
     
     

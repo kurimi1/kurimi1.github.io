@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>note | Donald Blog</title>
+    <link>/tag/note/</link>
+      <atom:link href="/tag/note/index.xml" rel="self" type="application/rss+xml" />
+    <description>note</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>note</title>
+      <link>/tag/note/</link>
+    </image>
+    
+    <item>
+      <title>go-zero note</title>
+      <link>/post/go-zero/</link>
+      <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/post/go-zero/</guid>
+      <description>&lt;h2 id=&#34;config使用环境变量&#34;&gt;config使用环境变量&lt;/h2&gt;
+&lt;p&gt;添加option&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;conf.MustLoad(*configFile, &amp;amp;c, conf.UseEnv())
+但其他地方不得出现$,会造成误判&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>protobuf note</title>
+      <link>/post/protobuf/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/post/protobuf/</guid>
+      <description>&lt;h2 id=&#34;proto3定义数组类型&#34;&gt;proto3定义数组类型&lt;/h2&gt;
+&lt;p&gt;repeated允许字段重复，对于Go语言来说，它会编译成数组(slice of type)类型的格式。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;repeated string Urls = 5;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;proto3返回struct数组&#34;&gt;proto3返回struct数组&lt;/h2&gt;
+&lt;p&gt;message foo {
+string Title         = 1;
+int64 StatusCode     = 2;
+int64 Size           = 3;
+string Survey        = 4;
+repeated string Urls = 5;
+string ScreenShot    = 6;
+}&lt;/p&gt;
+&lt;p&gt;// 返回域名相关情报
+message boo {
+repeated foo results = 1;
+}&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>/post/mysql/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/post/mysql/</guid>
+      <description>&lt;h2 id=&#34;mysql修改密码&#34;&gt;mysql修改密码&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ALTER USER &amp;lsquo;root&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; IDENTIFIED WITH mysql_native_password BY &amp;lsquo;在这里输入你的密码&amp;rsquo;;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;mysql-创建用户及授权&#34;&gt;mysql 创建用户及授权&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;create user &amp;lsquo;test&amp;rsquo;@&#39;%&#39; identified with mysql_native_password BY &amp;lsquo;密码&amp;rsquo;;
+grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; with grant option;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;更新权限&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;flush privileges;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;mysql-开启命令补全&#34;&gt;mysql 开启命令补全&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;mysql -u root -p &amp;ndash;auto-rehash&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

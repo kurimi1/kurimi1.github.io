@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysql | Donald Blog</title>
+    <link>/tag/mysql/</link>
+      <atom:link href="/tag/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <description>mysql</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 21 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>mysql</title>
+      <link>/tag/mysql/</link>
+    </image>
+    
+    <item>
+      <title>mysql</title>
+      <link>/post/mysql/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/post/mysql/</guid>
+      <description>&lt;h2 id=&#34;mysql修改密码&#34;&gt;mysql修改密码&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ALTER USER &amp;lsquo;root&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; IDENTIFIED WITH mysql_native_password BY &amp;lsquo;在这里输入你的密码&amp;rsquo;;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;mysql-创建用户及授权&#34;&gt;mysql 创建用户及授权&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;create user &amp;lsquo;test&amp;rsquo;@&#39;%&#39; identified with mysql_native_password BY &amp;lsquo;密码&amp;rsquo;;
+grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; with grant option;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;更新权限&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;flush privileges;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;mysql-开启命令补全&#34;&gt;mysql 开启命令补全&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;mysql -u root -p &amp;ndash;auto-rehash&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

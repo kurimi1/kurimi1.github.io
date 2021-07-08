@@ -5,12 +5,145 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Donald Blog</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 17 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 07 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Donald Blog</title>
       <link>/</link>
     </image>
+    
+    <item>
+      <title>hugo note</title>
+      <link>/post/hugo/hugo/</link>
+      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/hugo/hugo/</guid>
+      <description>&lt;h2 id=&#34;本地预览命令&#34;&gt;本地预览命令&lt;/h2&gt;
+&lt;h2 id=&#34;编译命令&#34;&gt;编译命令&lt;/h2&gt;
+&lt;h2 id=&#34;发布&#34;&gt;发布&lt;/h2&gt;
+&lt;p&gt;push 到 github&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>关于使用https的坑</title>
+      <link>/post/https-verify/</link>
+      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/https-verify/</guid>
+      <description>&lt;h2 id=&#34;x509-cannot-validate-certificate-for-xxxx-because-it-doesnt-contain-any-ip-sans-解决方法&#34;&gt;x509: cannot validate certificate for x.x.x.x because it doesn&amp;rsquo;t contain any IP SANs 解决方法&lt;/h2&gt;
+&lt;p&gt;这种问题通常出现在ip使用https时(k8s自动生成证书)。因为k8s生成的证书的Subject Alternative Name都是DNS解析的，所以使用nodeport发布服务时node的ip地址不在验证域中，解决方法有两种&lt;/p&gt;
+&lt;h3 id=&#34;1客户端取消证书验证&#34;&gt;1：客户端取消证书验证&lt;/h3&gt;
+&lt;p&gt;例如docker 使用insecure-registries配置&lt;/p&gt;
+&lt;h3 id=&#34;2重新生成服务端证书&#34;&gt;2：重新生成服务端证书&lt;/h3&gt;
+&lt;p&gt;自签证书被某些客户端 || sdk无法验证，只能采用第一种方式&lt;/p&gt;
+&lt;h4 id=&#34;查看证书公钥命令&#34;&gt;查看证书（公钥）命令&lt;/h4&gt;
+&lt;p&gt;openssl x509 -in ./public.crt -noout -text&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;在Subject Alternative Name中添加ip&lt;/p&gt;
+&lt;h4 id=&#34;创建一个以opensslconf以下内容命名的文件设置ip1和或dns1指向正确的-ipdns-地址&#34;&gt;创建一个以openssl.conf以下内容命名的文件。设置IP.1和/或DNS.1指向正确的 IP/DNS 地址&lt;/h4&gt;
+&lt;p&gt;[req]
+distinguished_name = req_distinguished_name
+x509_extensions = v3_req
+prompt = no&lt;/p&gt;
+&lt;p&gt;[req_distinguished_name]
+C = US
+ST = VA
+L = Somewhere
+O = MyOrg
+OU = MyOU
+CN = MyServerName&lt;/p&gt;
+&lt;p&gt;[v3_req]
+subjectAltName = @alt_names&lt;/p&gt;
+&lt;p&gt;[alt_names]
+IP.1 = 127.0.0.1
+DNS.1 = localhost&lt;/p&gt;
+&lt;p&gt;IP地址不能使用CIDR格式，必须指定到ip&lt;/p&gt;
+&lt;h4 id=&#34;openssl通过指定配置文件运行并在出现提示时输入密码&#34;&gt;openssl通过指定配置文件运行并在出现提示时输入密码&lt;/h4&gt;
+&lt;p&gt;openssl req -new -x509 -nodes -days 730 -key private.key -out public.crt -config openssl.conf&lt;/p&gt;
+&lt;p&gt;修改完证书后需要重启&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>go-zero note</title>
+      <link>/post/go-zero/</link>
+      <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/post/go-zero/</guid>
+      <description>&lt;h2 id=&#34;config使用环境变量&#34;&gt;config使用环境变量&lt;/h2&gt;
+&lt;p&gt;添加option&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;conf.MustLoad(*configFile, &amp;amp;c, conf.UseEnv())
+但其他地方不得出现$,会造成误判&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>protobuf note</title>
+      <link>/post/protobuf/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/post/protobuf/</guid>
+      <description>&lt;h2 id=&#34;proto3定义数组类型&#34;&gt;proto3定义数组类型&lt;/h2&gt;
+&lt;p&gt;repeated允许字段重复，对于Go语言来说，它会编译成数组(slice of type)类型的格式。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;repeated string Urls = 5;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;proto3返回struct数组&#34;&gt;proto3返回struct数组&lt;/h2&gt;
+&lt;p&gt;message foo {
+string Title         = 1;
+int64 StatusCode     = 2;
+int64 Size           = 3;
+string Survey        = 4;
+repeated string Urls = 5;
+string ScreenShot    = 6;
+}&lt;/p&gt;
+&lt;p&gt;// 返回域名相关情报
+message boo {
+repeated foo results = 1;
+}&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>/post/mysql/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/post/mysql/</guid>
+      <description>&lt;h2 id=&#34;mysql修改密码&#34;&gt;mysql修改密码&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ALTER USER &amp;lsquo;root&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; IDENTIFIED WITH mysql_native_password BY &amp;lsquo;在这里输入你的密码&amp;rsquo;;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;mysql-创建用户及授权&#34;&gt;mysql 创建用户及授权&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;create user &amp;lsquo;test&amp;rsquo;@&#39;%&#39; identified with mysql_native_password BY &amp;lsquo;密码&amp;rsquo;;
+grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; with grant option;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;更新权限&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;flush privileges;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;mysql-开启命令补全&#34;&gt;mysql 开启命令补全&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;mysql -u root -p &amp;ndash;auto-rehash&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>vscode设置proto插件</title>
+      <link>/post/set-vscode-proto-plugin/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/post/set-vscode-proto-plugin/</guid>
+      <description>&lt;h2 id=&#34;安装插件&#34;&gt;安装插件&lt;/h2&gt;
+&lt;p&gt;搜索安装这两个插件，第一个插件会调用第二个插件进行格式化&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vscode-proto3&lt;/li&gt;
+&lt;li&gt;clang-format&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;插件配置&#34;&gt;插件配置&lt;/h2&gt;
+&lt;p&gt;&amp;ldquo;clang-format.style&amp;rdquo;: &amp;ldquo;google&amp;rdquo;
+&amp;ldquo;clang-format.style&amp;rdquo;: &amp;ldquo;{ IndentWidth: 4, BasedOnStyle: google, AlignConsecutiveAssignments: true }&amp;rdquo;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>云原生总结</title>
@@ -181,7 +314,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-815469273&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-852719364&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -191,7 +324,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-815469273&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-852719364&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -475,6 +608,15 @@ date: 2019-09-01
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/admin/config.yml</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>redis</title>
+      <link>/post/redis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/post/redis/</guid>
+      <description>&lt;h2 id=&#34;sdsa&#34;&gt;sdsa&lt;/h2&gt;
+</description>
     </item>
     
   </channel>
