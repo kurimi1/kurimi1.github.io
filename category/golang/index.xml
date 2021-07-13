@@ -5,12 +5,39 @@
     <link>/category/golang/</link>
       <atom:link href="/category/golang/index.xml" rel="self" type="application/rss+xml" />
     <description>golang</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>golang</title>
       <link>/category/golang/</link>
     </image>
+    
+    <item>
+      <title>es note</title>
+      <link>/post/es/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/es/</guid>
+      <description>&lt;h2 id=&#34;es7中-golang客户端聚合查询&#34;&gt;es7中 golang客户端聚合查询&lt;/h2&gt;
+&lt;p&gt;es7 中term无法使用多字段因此使用bool聚合查询
+must下匹配，filter进行过滤，range定义范围&lt;/p&gt;
+&lt;h2 id=&#34;查询方法&#34;&gt;查询方法&lt;/h2&gt;
+&lt;p&gt;term 精准
+match 模糊
+match_phrase 模糊但只保留那些包含全部搜索词项，且位置与搜索词项相同的文档&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>go test</title>
+      <link>/post/go-test/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/go-test/</guid>
+      <description>&lt;h2 id=&#34;指定测试函数&#34;&gt;指定测试函数&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;go test -v -test.run xxxx&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
     
     <item>
       <title>go-zero note</title>
@@ -23,6 +50,7 @@
 &lt;p&gt;conf.MustLoad(*configFile, &amp;amp;c, conf.UseEnv())
 但其他地方不得出现$,会造成误判&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;数据库建立索引会自动生成find代码&#34;&gt;数据库建立索引会自动生成find代码&lt;/h2&gt;
 </description>
     </item>
     

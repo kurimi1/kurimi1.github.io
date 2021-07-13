@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>es | Donald Blog</title>
+    <link>/tag/es/</link>
+      <atom:link href="/tag/es/index.xml" rel="self" type="application/rss+xml" />
+    <description>es</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>es</title>
+      <link>/tag/es/</link>
+    </image>
+    
+    <item>
+      <title>es note</title>
+      <link>/post/es/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/es/</guid>
+      <description>&lt;h2 id=&#34;es7中-golang客户端聚合查询&#34;&gt;es7中 golang客户端聚合查询&lt;/h2&gt;
+&lt;p&gt;es7 中term无法使用多字段因此使用bool聚合查询
+must下匹配，filter进行过滤，range定义范围&lt;/p&gt;
+&lt;h2 id=&#34;查询方法&#34;&gt;查询方法&lt;/h2&gt;
+&lt;p&gt;term 精准
+match 模糊
+match_phrase 模糊但只保留那些包含全部搜索词项，且位置与搜索词项相同的文档&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

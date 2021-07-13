@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>note | Donald Blog</title>
+    <link>/category/note/</link>
+      <atom:link href="/category/note/index.xml" rel="self" type="application/rss+xml" />
+    <description>note</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>note</title>
+      <link>/category/note/</link>
+    </image>
+    
+    <item>
+      <title>redis note</title>
+      <link>/post/redis/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/redis/</guid>
+      <description>&lt;h2 id=&#34;获取所有key&#34;&gt;获取所有key&lt;/h2&gt;
+&lt;p&gt;keys *&lt;/p&gt;
+&lt;h2 id=&#34;docker-安装redis&#34;&gt;docker 安装redis&lt;/h2&gt;
+&lt;p&gt;持久化
+docker run &amp;ndash;name some-redis -d -p 6379:6379 redis redis-server &amp;ndash;appendonly yes&lt;/p&gt;
+&lt;h2 id=&#34;查看key的过期时间&#34;&gt;查看key的过期时间&lt;/h2&gt;
+&lt;p&gt;ttl key&lt;/p&gt;
+&lt;h2 id=&#34;查看key的类型&#34;&gt;查看key的类型&lt;/h2&gt;
+&lt;p&gt;type key&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>go test</title>
+      <link>/post/go-test/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/go-test/</guid>
+      <description>&lt;h2 id=&#34;指定测试函数&#34;&gt;指定测试函数&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;go test -v -test.run xxxx&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,12 +5,56 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Donald Blog</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 07 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Donald Blog</title>
       <link>/</link>
     </image>
+    
+    <item>
+      <title>es note</title>
+      <link>/post/es/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/es/</guid>
+      <description>&lt;h2 id=&#34;es7中-golang客户端聚合查询&#34;&gt;es7中 golang客户端聚合查询&lt;/h2&gt;
+&lt;p&gt;es7 中term无法使用多字段因此使用bool聚合查询
+must下匹配，filter进行过滤，range定义范围&lt;/p&gt;
+&lt;h2 id=&#34;查询方法&#34;&gt;查询方法&lt;/h2&gt;
+&lt;p&gt;term 精准
+match 模糊
+match_phrase 模糊但只保留那些包含全部搜索词项，且位置与搜索词项相同的文档&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>redis note</title>
+      <link>/post/redis/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/redis/</guid>
+      <description>&lt;h2 id=&#34;获取所有key&#34;&gt;获取所有key&lt;/h2&gt;
+&lt;p&gt;keys *&lt;/p&gt;
+&lt;h2 id=&#34;docker-安装redis&#34;&gt;docker 安装redis&lt;/h2&gt;
+&lt;p&gt;持久化
+docker run &amp;ndash;name some-redis -d -p 6379:6379 redis redis-server &amp;ndash;appendonly yes&lt;/p&gt;
+&lt;h2 id=&#34;查看key的过期时间&#34;&gt;查看key的过期时间&lt;/h2&gt;
+&lt;p&gt;ttl key&lt;/p&gt;
+&lt;h2 id=&#34;查看key的类型&#34;&gt;查看key的类型&lt;/h2&gt;
+&lt;p&gt;type key&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>go test</title>
+      <link>/post/go-test/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/go-test/</guid>
+      <description>&lt;h2 id=&#34;指定测试函数&#34;&gt;指定测试函数&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;go test -v -test.run xxxx&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
     
     <item>
       <title>hugo note</title>
@@ -76,6 +120,7 @@ DNS.1 = localhost&lt;/p&gt;
 &lt;p&gt;conf.MustLoad(*configFile, &amp;amp;c, conf.UseEnv())
 但其他地方不得出现$,会造成误判&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;数据库建立索引会自动生成find代码&#34;&gt;数据库建立索引会自动生成find代码&lt;/h2&gt;
 </description>
     </item>
     
@@ -127,6 +172,12 @@ grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&a
 &lt;blockquote&gt;
 &lt;p&gt;mysql -u root -p &amp;ndash;auto-rehash&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;修改配置文件把127001注释掉&#34;&gt;修改配置文件，把127.0.0.1注释掉&lt;/h2&gt;
+&lt;p&gt;vim /etc/mysql/mysql.conf.d/mysqld.cnf&lt;/p&gt;
+&lt;h2 id=&#34;varchar&#34;&gt;varchar&lt;/h2&gt;
+&lt;p&gt;同样的，varchar(M)中的的M表示保存的最大字符数，单个字母、数字、中文等都是占用一个字符。varchar可存储的长度范围为0-65535字节，此外，varchar需要使用1或者2个额外字节记录字符串的长度：如果列的最大长度小于或等于255字节，则只使用1个字节表示，否则使用2个字节。对于Innodb引擎，utf8字符集来说，单个中文字符占用3个字节，所以varchar(M)中的M最大不会超过21845，即M的范围是[0,21845)，并且M必须指定。另外MySQL规定：单个字段长度不大于65535字节；单行最大限制为65535，这里不包括TEXT、BLOB字段。即单张表中的所有varchar字段定义的长度之和不能大于65535，所以并不是所有varchar(M)字段中的M都可以取到21844&lt;/p&gt;
+&lt;h2 id=&#34;mysql-8&#34;&gt;mysql 8&lt;/h2&gt;
+&lt;h3 id=&#34;约束字段为unique唯一时会自动建立索引&#34;&gt;约束字段为unique唯一时，会自动建立索引&lt;/h3&gt;
 </description>
     </item>
     
@@ -316,7 +367,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-821569374&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-458923167&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -326,7 +377,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-821569374&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-458923167&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -610,15 +661,6 @@ date: 2019-09-01
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/admin/config.yml</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>redis</title>
-      <link>/post/redis/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/post/redis/</guid>
-      <description>&lt;h2 id=&#34;sdsa&#34;&gt;sdsa&lt;/h2&gt;
-</description>
     </item>
     
   </channel>
