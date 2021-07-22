@@ -5,12 +5,45 @@
     <link>/tag/note/</link>
       <atom:link href="/tag/note/index.xml" rel="self" type="application/rss+xml" />
     <description>note</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 16 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>note</title>
       <link>/tag/note/</link>
     </image>
+    
+    <item>
+      <title>使用Telepresence本地开发调试k8s微服务</title>
+      <link>/post/telepresence/</link>
+      <pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/telepresence/</guid>
+      <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
+&lt;p&gt;借助Telepresence实现以下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地服务可以访问k8s集群内的服务&lt;/li&gt;
+&lt;li&gt;别人访问k8s集群内的服务，请求可以转发到我本地，从而能够debug&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;官方文档
+&lt;a href=&#34;https://www.telepresence.io/docs/latest/howtos/intercepts/&#34;&gt;https://www.telepresence.io/docs/latest/howtos/intercepts/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;配置&#34;&gt;配置&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p ~/.kube/config
+# 将master的kubeconfig拷贝到~/.kube/config/
+vim config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;踩坑&#34;&gt;踩坑&lt;/h2&gt;
+&lt;p&gt;因为是本地开发，所以需要设置一下环境变量，否则会报错
+设置hosts   k8s API server的IP地址&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;echo &amp;quot;10.254.0.1 kubernetes&amp;quot; &amp;gt;&amp;gt; /etc/hosts
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;链接&#34;&gt;链接&lt;/h2&gt;
+&lt;p&gt;telepresence connect&lt;/p&gt;
+&lt;h2 id=&#34;断开&#34;&gt;断开&lt;/h2&gt;
+&lt;p&gt;telepresence quit&lt;/p&gt;
+&lt;h2 id=&#34;bug&#34;&gt;bug&lt;/h2&gt;
+&lt;p&gt;终端链接数据库，会断&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>es note</title>
@@ -102,7 +135,9 @@ repeated foo results = 1;
       <link>/post/mysql/</link>
       <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
       <guid>/post/mysql/</guid>
-      <description>&lt;h2 id=&#34;mysql修改密码&#34;&gt;mysql修改密码&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;好的总结&#34;&gt;好的总结&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/guorui_java/article/details/118558095&#34;&gt;https://blog.csdn.net/guorui_java/article/details/118558095&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;mysql修改密码&#34;&gt;mysql修改密码&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;ALTER USER &amp;lsquo;root&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; IDENTIFIED WITH mysql_native_password BY &amp;lsquo;在这里输入你的密码&amp;rsquo;;&lt;/p&gt;
 &lt;/blockquote&gt;

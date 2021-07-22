@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mysql | Donald Blog</title>
-    <link>/tag/mysql/</link>
-      <atom:link href="/tag/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <link>/category/mysql/</link>
+      <atom:link href="/category/mysql/index.xml" rel="self" type="application/rss+xml" />
     <description>mysql</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 21 Jun 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>mysql</title>
-      <link>/tag/mysql/</link>
+      <link>/category/mysql/</link>
     </image>
     
     <item>
