@@ -24,8 +24,8 @@
 &lt;li&gt;clang-format&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;插件配置&#34;&gt;插件配置&lt;/h2&gt;
-&lt;p&gt;&amp;ldquo;clang-format.style&amp;rdquo;: &amp;ldquo;google&amp;rdquo;
-&amp;ldquo;clang-format.style&amp;rdquo;: &amp;ldquo;{ IndentWidth: 4, BasedOnStyle: google, AlignConsecutiveAssignments: true }&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;clang-format:fallback style&amp;rdquo;: &amp;ldquo;google&amp;rdquo;
+&amp;ldquo;clang-format.language.proto:style&amp;rdquo;: &amp;ldquo;{ IndentWidth: 4, BasedOnStyle: google, AlignConsecutiveAssignments: true }&amp;rdquo;&lt;/p&gt;
 </description>
     </item>
     

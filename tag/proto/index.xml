@@ -35,6 +35,9 @@ string ScreenShot    = 6;
 message boo {
 repeated foo results = 1;
 }&lt;/p&gt;
+&lt;h2 id=&#34;导入官方提供的proto文件time&#34;&gt;导入官方提供的proto文件，time&lt;/h2&gt;
+&lt;p&gt;放置到/usr/local/include
+&lt;a href=&#34;https://ask.csdn.net/questions/1010240&#34;&gt;https://ask.csdn.net/questions/1010240&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

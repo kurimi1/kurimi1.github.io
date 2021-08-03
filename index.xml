@@ -5,12 +5,73 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Donald Blog</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 16 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 03 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Donald Blog</title>
       <link>/</link>
     </image>
+    
+    <item>
+      <title>goalng使用gitlab私有库</title>
+      <link>/post/golang-use-private-libraries/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>/post/golang-use-private-libraries/</guid>
+      <description>&lt;h2 id=&#34;设置私有库&#34;&gt;设置私有库&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;go env -w GOPRIVATE=&amp;ldquo;gitlab.com&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;如果内网gitlab用的http需设置&#34;&gt;如果内网gitlab用的http需设置&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;go env -w GOINSECURE=&amp;ldquo;gitlab.com&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;坑点被导入的私有库的mod必须包含gitlib&#34;&gt;坑点：被导入的私有库的mod必须包含gitlib&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;module gitlab.com/xxx&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>分布式id生成服务-雪花算法</title>
+      <link>/post/snowflake-go/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/snowflake-go/</guid>
+      <description>&lt;h2 id=&#34;用go实现一个分布式id生成服务grpchttp&#34;&gt;用go实现一个分布式id生成服务，grpc，http&lt;/h2&gt;
+&lt;p&gt;主要是workid的生成&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>基于区块链的匿名通信系统</title>
+      <link>/post/im-blockchain/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/im-blockchain/</guid>
+      <description>&lt;p&gt;对于上面所说的中间人攻击，我觉得可以用区块链解决，所有人公开公钥且公钥不和用户绑定。发消息时用公钥加密广播，仅持有此公钥的私钥的人才能看到所发消息。但存在一个消息泛滥问题，所有人都可以发消息给这个公钥，然而数字货币不会存在（因为没人会随便给你转账），这个问题可以用发消息+数字货币的方式解决。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>osint和recon工具或系统汇总</title>
+      <link>/post/reconosint-toolssystem/</link>
+      <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/reconosint-toolssystem/</guid>
+      <description>&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>golang的一些笔记</title>
+      <link>/post/go-base/</link>
+      <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/go-base/</guid>
+      <description>&lt;h2 id=&#34;多态的方法&#34;&gt;多态的方法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;常用的interface接口&lt;/li&gt;
+&lt;li&gt;利用反射reflect判断struct的name(或者直接获取xxx.(type))&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>使用Telepresence本地开发调试k8s微服务</title>
@@ -180,6 +241,9 @@ string ScreenShot    = 6;
 message boo {
 repeated foo results = 1;
 }&lt;/p&gt;
+&lt;h2 id=&#34;导入官方提供的proto文件time&#34;&gt;导入官方提供的proto文件，time&lt;/h2&gt;
+&lt;p&gt;放置到/usr/local/include
+&lt;a href=&#34;https://ask.csdn.net/questions/1010240&#34;&gt;https://ask.csdn.net/questions/1010240&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -228,8 +292,8 @@ grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&a
 &lt;li&gt;clang-format&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;插件配置&#34;&gt;插件配置&lt;/h2&gt;
-&lt;p&gt;&amp;ldquo;clang-format.style&amp;rdquo;: &amp;ldquo;google&amp;rdquo;
-&amp;ldquo;clang-format.style&amp;rdquo;: &amp;ldquo;{ IndentWidth: 4, BasedOnStyle: google, AlignConsecutiveAssignments: true }&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;clang-format:fallback style&amp;rdquo;: &amp;ldquo;google&amp;rdquo;
+&amp;ldquo;clang-format.language.proto:style&amp;rdquo;: &amp;ldquo;{ IndentWidth: 4, BasedOnStyle: google, AlignConsecutiveAssignments: true }&amp;rdquo;&lt;/p&gt;
 </description>
     </item>
     
@@ -402,7 +466,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-493127685&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-968245173&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -412,7 +476,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-493127685&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-968245173&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();

@@ -5,12 +5,25 @@
     <link>/tag/pitfall/</link>
       <atom:link href="/tag/pitfall/index.xml" rel="self" type="application/rss+xml" />
     <description>pitfall</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 16 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>pitfall</title>
       <link>/tag/pitfall/</link>
     </image>
+    
+    <item>
+      <title>golang的一些笔记</title>
+      <link>/post/go-base/</link>
+      <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/go-base/</guid>
+      <description>&lt;h2 id=&#34;多态的方法&#34;&gt;多态的方法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;常用的interface接口&lt;/li&gt;
+&lt;li&gt;利用反射reflect判断struct的name(或者直接获取xxx.(type))&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>使用Telepresence本地开发调试k8s微服务</title>
