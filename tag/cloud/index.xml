@@ -5,12 +5,49 @@
     <link>/tag/cloud/</link>
       <atom:link href="/tag/cloud/index.xml" rel="self" type="application/rss+xml" />
     <description>cloud</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 17 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 17 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>cloud</title>
       <link>/tag/cloud/</link>
     </image>
+    
+    <item>
+      <title>rook-ceph 踩坑</title>
+      <link>/post/rook-ceph/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>/post/rook-ceph/</guid>
+      <description>&lt;h2 id=&#34;清理集群&#34;&gt;清理集群&lt;/h2&gt;
+&lt;p&gt;关闭pods，才能pvc才能被删除&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rook.io/docs/rook/v1.7/ceph-teardown.html&#34;&gt;https://rook.io/docs/rook/v1.7/ceph-teardown.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;节点磁盘格式化&#34;&gt;节点磁盘格式化&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/usr/bin/env bash
+DISK=&amp;quot;/dev/sdb&amp;quot;
+
+# Zap the disk to a fresh, usable state (zap-all is important, b/c MBR has to be clean)
+
+# You will have to run this step for all disks.
+sgdisk --zap-all $DISK
+
+# Clean hdds with dd
+dd if=/dev/zero of=&amp;quot;$DISK&amp;quot; bs=1M count=100 oflag=direct,dsync
+
+# Clean disks such as ssd with blkdiscard instead of dd
+blkdiscard $DISK
+
+# These steps only have to be run once on each node
+# If rook sets up osds using ceph-volume, teardown leaves some devices mapped that lock the disks.
+ls /dev/mapper/ceph-* | xargs -I% -- dmsetup remove %
+
+# ceph-volume setup can leave ceph-&amp;lt;UUID&amp;gt; directories in /dev and /dev/mapper (unnecessary clutter)
+rm -rf /dev/ceph-*
+rm -rf /dev/mapper/ceph--*
+
+# Inform the OS of partition table changes
+partprobe $DISK
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>云原生总结</title>

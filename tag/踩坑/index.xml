@@ -5,12 +5,39 @@
     <link>/tag/%E8%B8%A9%E5%9D%91/</link>
       <atom:link href="/tag/%E8%B8%A9%E5%9D%91/index.xml" rel="self" type="application/rss+xml" />
     <description>踩坑</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 03 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 19 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>踩坑</title>
       <link>/tag/%E8%B8%A9%E5%9D%91/</link>
     </image>
+    
+    <item>
+      <title>解决在vscode中go mod 不在当前目录下的问题</title>
+      <link>/post/set-vscode-gopls/</link>
+      <pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>/post/set-vscode-gopls/</guid>
+      <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;p&gt;gopls 在0.7版本之前不存在此问题，0.7之后，gopls 在go.mod 不在当前目录下的情况下，会报错，提示找不到 go.mod 文件。&lt;/p&gt;
+&lt;h2 id=&#34;gopls设置&#34;&gt;gopls设置&lt;/h2&gt;
+&lt;p&gt;参考gopls 文档： &lt;a href=&#34;https://github.com/golang/tools/blob/master/gopls/doc/settings.md&#34;&gt;https://github.com/golang/tools/blob/master/gopls/doc/settings.md&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;报错的原因&#34;&gt;报错的原因&lt;/h3&gt;
+&lt;p&gt;experimentalWorkspaceModule bool&lt;/p&gt;
+&lt;p&gt;This setting is experimental and may be deleted.
+experimentalWorkspaceModule opts a user into the experimental support for multi-module workspaces.&lt;/p&gt;
+&lt;p&gt;Default: false.&lt;/p&gt;
+&lt;h2 id=&#34;vscode-中设置&#34;&gt;vscode 中设置&lt;/h2&gt;
+&lt;p&gt;在插件设置最底下
+&lt;img src=&#34;./gopls.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+    &amp;quot;gopls&amp;quot;: {
+        &amp;quot;experimentalWorkspaceModule&amp;quot;: true
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;解决报错&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>goalng使用gitlab私有库</title>

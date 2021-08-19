@@ -5,12 +5,76 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Donald Blog</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 03 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 19 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Donald Blog</title>
       <link>/</link>
     </image>
+    
+    <item>
+      <title>解决在vscode中go mod 不在当前目录下的问题</title>
+      <link>/post/set-vscode-gopls/</link>
+      <pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>/post/set-vscode-gopls/</guid>
+      <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;p&gt;gopls 在0.7版本之前不存在此问题，0.7之后，gopls 在go.mod 不在当前目录下的情况下，会报错，提示找不到 go.mod 文件。&lt;/p&gt;
+&lt;h2 id=&#34;gopls设置&#34;&gt;gopls设置&lt;/h2&gt;
+&lt;p&gt;参考gopls 文档： &lt;a href=&#34;https://github.com/golang/tools/blob/master/gopls/doc/settings.md&#34;&gt;https://github.com/golang/tools/blob/master/gopls/doc/settings.md&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;报错的原因&#34;&gt;报错的原因&lt;/h3&gt;
+&lt;p&gt;experimentalWorkspaceModule bool&lt;/p&gt;
+&lt;p&gt;This setting is experimental and may be deleted.
+experimentalWorkspaceModule opts a user into the experimental support for multi-module workspaces.&lt;/p&gt;
+&lt;p&gt;Default: false.&lt;/p&gt;
+&lt;h2 id=&#34;vscode-中设置&#34;&gt;vscode 中设置&lt;/h2&gt;
+&lt;p&gt;在插件设置最底下
+&lt;img src=&#34;./gopls.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+    &amp;quot;gopls&amp;quot;: {
+        &amp;quot;experimentalWorkspaceModule&amp;quot;: true
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;解决报错&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>rook-ceph 踩坑</title>
+      <link>/post/rook-ceph/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>/post/rook-ceph/</guid>
+      <description>&lt;h2 id=&#34;清理集群&#34;&gt;清理集群&lt;/h2&gt;
+&lt;p&gt;关闭pods，才能pvc才能被删除&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rook.io/docs/rook/v1.7/ceph-teardown.html&#34;&gt;https://rook.io/docs/rook/v1.7/ceph-teardown.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;节点磁盘格式化&#34;&gt;节点磁盘格式化&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/usr/bin/env bash
+DISK=&amp;quot;/dev/sdb&amp;quot;
+
+# Zap the disk to a fresh, usable state (zap-all is important, b/c MBR has to be clean)
+
+# You will have to run this step for all disks.
+sgdisk --zap-all $DISK
+
+# Clean hdds with dd
+dd if=/dev/zero of=&amp;quot;$DISK&amp;quot; bs=1M count=100 oflag=direct,dsync
+
+# Clean disks such as ssd with blkdiscard instead of dd
+blkdiscard $DISK
+
+# These steps only have to be run once on each node
+# If rook sets up osds using ceph-volume, teardown leaves some devices mapped that lock the disks.
+ls /dev/mapper/ceph-* | xargs -I% -- dmsetup remove %
+
+# ceph-volume setup can leave ceph-&amp;lt;UUID&amp;gt; directories in /dev and /dev/mapper (unnecessary clutter)
+rm -rf /dev/ceph-*
+rm -rf /dev/mapper/ceph--*
+
+# Inform the OS of partition table changes
+partprobe $DISK
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>goalng使用gitlab私有库</title>
@@ -118,6 +182,12 @@ must下匹配，filter进行过滤，range定义范围&lt;/p&gt;
 &lt;p&gt;term 精准
 match 模糊
 match_phrase 模糊但只保留那些包含全部搜索词项，且位置与搜索词项相同的文档&lt;/p&gt;
+&lt;h2 id=&#34;docker-部署的es无法探测&#34;&gt;docker 部署的ES无法探测&lt;/h2&gt;
+&lt;p&gt;解决方法：
+set false&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;client, err = elastic.NewClient(elastic.SetSniff(false), elastic.SetURL(es_addr))&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     
@@ -466,7 +536,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-968245173&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-458612739&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -476,7 +546,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-968245173&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-458612739&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
