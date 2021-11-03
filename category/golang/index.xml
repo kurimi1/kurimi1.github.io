@@ -5,12 +5,31 @@
     <link>/category/golang/</link>
       <atom:link href="/category/golang/index.xml" rel="self" type="application/rss+xml" />
     <description>golang</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 19 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>golang</title>
       <link>/category/golang/</link>
     </image>
+    
+    <item>
+      <title>个人博客搜索引擎</title>
+      <link>/post/blog-search/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>/post/blog-search/</guid>
+      <description>&lt;h2 id=&#34;1期需求整理&#34;&gt;1期需求整理&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;全文搜索&lt;/li&gt;
+&lt;li&gt;指定语言&lt;/li&gt;
+&lt;li&gt;个人博客上传收录-进行爬取或rss&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;系统设计&#34;&gt;系统设计&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;使用gin web框架&lt;/li&gt;
+&lt;li&gt;ES做全文搜索&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>解决在vscode中go mod 不在当前目录下的问题</title>
@@ -20,7 +39,7 @@
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
 &lt;p&gt;gopls 在0.7版本之前不存在此问题，0.7之后，gopls 在go.mod 不在当前目录下的情况下，会报错，提示找不到 go.mod 文件。&lt;/p&gt;
 &lt;h2 id=&#34;gopls设置&#34;&gt;gopls设置&lt;/h2&gt;
-&lt;p&gt;参考gopls 文档： &lt;a href=&#34;https://github.com/golang/tools/blob/master/gopls/doc/settings.md&#34;&gt;https://github.com/golang/tools/blob/master/gopls/doc/settings.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考gopls 文档： &lt;a href=&#34;https://github.com/golang/tools/blob/master/gopls/doc/settings.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/golang/tools/blob/master/gopls/doc/settings.md&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;报错的原因&#34;&gt;报错的原因&lt;/h3&gt;
 &lt;p&gt;experimentalWorkspaceModule bool&lt;/p&gt;
 &lt;p&gt;This setting is experimental and may be deleted.
@@ -56,16 +75,6 @@ experimentalWorkspaceModule opts a user into the experimental support for multi-
 &lt;blockquote&gt;
 &lt;p&gt;module gitlab.com/xxx&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>分布式id生成服务-雪花算法</title>
-      <link>/post/snowflake-go/</link>
-      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/snowflake-go/</guid>
-      <description>&lt;h2 id=&#34;用go实现一个分布式id生成服务grpchttp&#34;&gt;用go实现一个分布式id生成服务，grpc，http&lt;/h2&gt;
-&lt;p&gt;主要是workid的生成&lt;/p&gt;
 </description>
     </item>
     
@@ -109,6 +118,17 @@ set false&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;client, err = elastic.NewClient(elastic.SetSniff(false), elastic.SetURL(es_addr))&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;eck-安装es取消安全选项&#34;&gt;eck 安装es，取消安全选项&lt;/h2&gt;
+&lt;h3 id=&#34;eck需要配置&#34;&gt;eck需要配置&lt;/h3&gt;
+&lt;p&gt;setDefaultSecurityContext: false&lt;/p&gt;
+&lt;h3 id=&#34;es-需要配置&#34;&gt;es 需要配置&lt;/h3&gt;
+&lt;p&gt;config:
+xpack.security.enabled: false
+xpack.security.http.ssl.enabled: false
+xpack.security.transport.ssl.enabled: false
+xpack.security.authc.reserved_realm.enabled: false&lt;/p&gt;
+&lt;h3 id=&#34;其他配置&#34;&gt;其他配置&lt;/h3&gt;
+&lt;p&gt;取消就绪检测等&lt;/p&gt;
 </description>
     </item>
     

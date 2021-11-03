@@ -5,24 +5,49 @@
     <link>/tag/cloud/</link>
       <atom:link href="/tag/cloud/index.xml" rel="self" type="application/rss+xml" />
     <description>cloud</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 17 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 08 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>cloud</title>
       <link>/tag/cloud/</link>
     </image>
+    
+    <item>
+      <title>在k8s中部署的系统获取用户ip</title>
+      <link>/post/k8s-get-userip/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>/post/k8s-get-userip/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;k8s Cluster模式 访问任何节点ip自带路由跳转(反向代理？)，因此后端获取到的是转换过一次的ip，而不是用户真实ip&lt;/p&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
+&lt;p&gt;设置：externalTrafficPolicy: Local&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>rook-ceph 踩坑</title>
       <link>/post/rook-ceph/</link>
       <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/post/rook-ceph/</guid>
-      <description>&lt;h2 id=&#34;清理集群&#34;&gt;清理集群&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;k8s-安装rook-ceph&#34;&gt;k8s 安装rook-ceph&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://rook.io/docs/rook/v1.7/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://rook.io/docs/rook/v1.7/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;添加新磁盘&#34;&gt;添加新磁盘&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#扫描 SCSI总线并添加 SCSI 设备
+for host in $(ls /sys/class/scsi_host) ; do echo &amp;quot;- - -&amp;quot; &amp;gt; /sys/class/scsi_host/$host/scan; done
+
+#重新扫描 SCSI 总线
+for scsi_device in $(ls /sys/class/scsi_device/); do echo 1 &amp;gt; /sys/class/scsi_device/$scsi_device/device/rescan; done
+
+#查看已添加的磁盘，能够看到sdb说明添加成功
+lsblk
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;清理集群&#34;&gt;清理集群&lt;/h2&gt;
 &lt;p&gt;关闭pods，才能pvc才能被删除&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://rook.io/docs/rook/v1.7/ceph-teardown.html&#34;&gt;https://rook.io/docs/rook/v1.7/ceph-teardown.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rook.io/docs/rook/v1.7/ceph-teardown.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://rook.io/docs/rook/v1.7/ceph-teardown.html&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;节点磁盘格式化&#34;&gt;节点磁盘格式化&lt;/h2&gt;
+&lt;p&gt;最好每个磁盘都格式化一下&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/usr/bin/env bash
-DISK=&amp;quot;/dev/sdb&amp;quot;
+DISK=&amp;quot;/dev/sdd&amp;quot;
 
 # Zap the disk to a fresh, usable state (zap-all is important, b/c MBR has to be clean)
 
@@ -45,7 +70,23 @@ rm -rf /dev/mapper/ceph--*
 
 # Inform the OS of partition table changes
 partprobe $DISK
+
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;删除&#34;&gt;删除&lt;/h2&gt;
+&lt;p&gt;删除Ceph集群后，在之前部署Ceph组件节点的/var/lib/rook/目录，会遗留下Ceph集群的配置信息。
+若之后再部署新的Ceph集群，先把之前Ceph集群的这些信息删除，不然启动monitor会失败；&lt;/p&gt;
+&lt;h3 id=&#34;坑点&#34;&gt;坑点&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;删除前必须先删除所有申请的资源&lt;/li&gt;
+&lt;li&gt;记得删除申请的文件系统！！！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;查看资源&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;kubectl api-resources &amp;ndash;namespaced=true -o name | xargs -n 1 kubectl get &amp;ndash;show-kind &amp;ndash;ignore-not-found -n rook-ceph&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用kubectl edit crd clusters.ceph.rook.io编辑
+Terminating，把finalizers的值删掉，保存&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.codeleading.com/article/5578440677/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.codeleading.com/article/5578440677/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -63,7 +104,7 @@ partprobe $DISK
 &lt;li&gt;Chaos Engineering(混沌工程)-chaosmonkey&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;腾讯文章&#34;&gt;腾讯文章&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&amp;amp;mid=2649760560&amp;amp;idx=1&amp;amp;sn=0e644916ed8a8bdcd65e903fb3498e74&amp;amp;chksm=beccb04b89bb395d4461f67cb319293dccc5c51047892bb7692d93e761d67a652eacd83ac62d&amp;amp;mpshare=1&amp;amp;scene=23&amp;amp;srcid=0616zu8zL3I5bYdVMbtposEu&amp;amp;sharer_sharetime=1623846102060&amp;amp;sharer_shareid=8a8cb9782b5089d1e0f623249d1fd45c#rd&#34;&gt;https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&amp;amp;mid=2649760560&amp;amp;idx=1&amp;amp;sn=0e644916ed8a8bdcd65e903fb3498e74&amp;amp;chksm=beccb04b89bb395d4461f67cb319293dccc5c51047892bb7692d93e761d67a652eacd83ac62d&amp;amp;mpshare=1&amp;amp;scene=23&amp;amp;srcid=0616zu8zL3I5bYdVMbtposEu&amp;amp;sharer_sharetime=1623846102060&amp;amp;sharer_shareid=8a8cb9782b5089d1e0f623249d1fd45c#rd&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&amp;amp;mid=2649760560&amp;amp;idx=1&amp;amp;sn=0e644916ed8a8bdcd65e903fb3498e74&amp;amp;chksm=beccb04b89bb395d4461f67cb319293dccc5c51047892bb7692d93e761d67a652eacd83ac62d&amp;amp;mpshare=1&amp;amp;scene=23&amp;amp;srcid=0616zu8zL3I5bYdVMbtposEu&amp;amp;sharer_sharetime=1623846102060&amp;amp;sharer_shareid=8a8cb9782b5089d1e0f623249d1fd45c#rd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&amp;mid=2649760560&amp;idx=1&amp;sn=0e644916ed8a8bdcd65e903fb3498e74&amp;chksm=beccb04b89bb395d4461f67cb319293dccc5c51047892bb7692d93e761d67a652eacd83ac62d&amp;mpshare=1&amp;scene=23&amp;srcid=0616zu8zL3I5bYdVMbtposEu&amp;sharer_sharetime=1623846102060&amp;sharer_shareid=8a8cb9782b5089d1e0f623249d1fd45c#rd&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

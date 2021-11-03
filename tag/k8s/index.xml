@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k8s | Donald Blog</title>
+    <link>/tag/k8s/</link>
+      <atom:link href="/tag/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <description>k8s</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 14 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>k8s</title>
+      <link>/tag/k8s/</link>
+    </image>
+    
+    <item>
+      <title>解决k8s 国外镜像下载问题</title>
+      <link>/post/k8s-mirror/</link>
+      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/post/k8s-mirror/</guid>
+      <description>&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
+&lt;p&gt;所有国内镜像库都不可用&lt;/p&gt;
+&lt;h2 id=&#34;解决方法-设置代理&#34;&gt;解决方法-设置代理&lt;/h2&gt;
+&lt;p&gt;docker 为service，配置代理方法如下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：将国内库与私有库设置为no_proxy&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;docker-配置代理&#34;&gt;docker 配置代理&lt;/h3&gt;
+&lt;p&gt;sudo mkdir -p /etc/systemd/system/docker.service.d&lt;/p&gt;
+&lt;p&gt;cat &amp;laquo;EOF | sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service]
+Environment=&amp;ldquo;HTTP_PROXY=socks5://10.67.15.212:1080&amp;rdquo;
+Environment=&amp;ldquo;HTTPS_PROXY=socks5://10.67.15.212:1080&amp;rdquo;
+Environment=&amp;ldquo;NO_PROXY=localhost,127.0.0.1,docker.mirrors.ustc.edu.cn,docker.io,docker.com,registry.cn-hangzhou.aliyuncs.com,core.harbor.intra.com,10.67.15.211:30003&amp;rdquo;
+EOF&lt;/p&gt;
+&lt;p&gt;sudo systemctl daemon-reload
+sudo systemctl restart docker&lt;/p&gt;
+&lt;h4 id=&#34;踩坑&#34;&gt;踩坑&lt;/h4&gt;
+&lt;p&gt;这两个官方域名也不能代理docker.io,docker.com&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

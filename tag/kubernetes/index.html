@@ -270,8 +270,8 @@
     <link rel="manifest" href="/index.webmanifest" />
   
 
-  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
   <link rel="canonical" href="/tag/kubernetes/" />
 
@@ -292,11 +292,11 @@
   <meta property="og:site_name" content="Donald Blog" />
   <meta property="og:url" content="/tag/kubernetes/" />
   <meta property="og:title" content="kubernetes | Donald Blog" />
-  <meta property="og:description" content="Donald Blog" /><meta property="og:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" />
-    <meta property="twitter:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="zh-Hans" />
+  <meta property="og:description" content="Donald Blog" /><meta property="og:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
   
     
-      <meta property="og:updated_time" content="2021-08-17T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2021-10-08T00:00:00&#43;00:00" />
     
   
 
@@ -553,12 +553,24 @@
     
     
     <div>
+      <h2><a href="/post/k8s-get-userip/" >在k8s中部署的系统获取用户ip</a></h2>
+      <div class="article-style">
+        
+          背景 k8s Cluster模式 访问任何节点ip自带路由跳转(反向代理？)，因此后端获取到的是转换过一次的ip，而不是用户真实ip
+解决方法 设置：externalTrafficPolicy: Local
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
       <h2><a href="/post/rook-ceph/" >rook-ceph 踩坑</a></h2>
       <div class="article-style">
         
-          清理集群 关闭pods，才能pvc才能被删除
-https://rook.io/docs/rook/v1.7/ceph-teardown.html
-节点磁盘格式化 #!/usr/bin/env bash DISK=&quot;/dev/sdb&quot; # Zap the disk to a fresh, usable state (zap-all is important, b/c MBR has to be clean) # You will have to run this step for all disks.
+          k8s 安装rook-ceph https://rook.io/docs/rook/v1.7/
+添加新磁盘 #扫描 SCSI总线并添加 SCSI 设备 for host in $(ls /sys/class/scsi_host) ; do echo &quot;- - -&quot; &gt; /sys/class/scsi_host/$host/scan; done #重新扫描 SCSI 总线 for scsi_device in $(ls /sys/class/scsi_device/); do echo 1 &gt; /sys/class/scsi_device/$scsi_device/device/rescan; done #查看已添加的磁盘，能够看到sdb说明添加成功 lsblk  清理集群 关闭pods，才能pvc才能被删除
         
       </div>
     </div>

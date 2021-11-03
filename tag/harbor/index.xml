@@ -7,7 +7,7 @@
     <description>harbor</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 11 Jun 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>harbor</title>
       <link>/tag/harbor/</link>
     </image>
@@ -18,7 +18,7 @@
       <pubDate>Fri, 11 Jun 2021 00:00:00 +0000</pubDate>
       <guid>/post/harbor/</guid>
       <description>&lt;h2 id=&#34;helm下载harbor&#34;&gt;helm下载harbor&lt;/h2&gt;
-&lt;p&gt;helm repo add harbor &lt;a href=&#34;https://helm.goharbor.io&#34;&gt;https://helm.goharbor.io&lt;/a&gt;
+&lt;p&gt;helm repo add harbor &lt;a href=&#34;https://helm.goharbor.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://helm.goharbor.io&lt;/a&gt;
 helm fetch harbor/harbor &amp;ndash;untar
 helm pull harbor/harbor&lt;/p&gt;
 &lt;h2 id=&#34;配置主要地方&#34;&gt;配置（主要地方）&lt;/h2&gt;
@@ -44,7 +44,7 @@ for example：&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;docker默认配置针对127.0.0.0/8本地回环地址不验证，但还有10.0.0.0/8这个内网&lt;/p&gt;
 &lt;h3 id=&#34;externalurl&#34;&gt;externalURL&lt;/h3&gt;
-&lt;p&gt;协议：//ip：端口&lt;/p&gt;
+&lt;p&gt;协议://ip：端口&lt;/p&gt;
 &lt;h3 id=&#34;pvc配置&#34;&gt;pvc配置&lt;/h3&gt;
 &lt;p&gt;提供storageClass即可&lt;/p&gt;
 &lt;h2 id=&#34;配置docker-http登录&#34;&gt;配置docker http登录&lt;/h2&gt;

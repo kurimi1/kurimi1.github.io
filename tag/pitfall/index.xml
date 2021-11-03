@@ -7,7 +7,7 @@
     <description>pitfall</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>pitfall</title>
       <link>/tag/pitfall/</link>
     </image>
@@ -38,7 +38,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;p&gt;官方文档
-&lt;a href=&#34;https://www.telepresence.io/docs/latest/howtos/intercepts/&#34;&gt;https://www.telepresence.io/docs/latest/howtos/intercepts/&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://www.telepresence.io/docs/latest/howtos/intercepts/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.telepresence.io/docs/latest/howtos/intercepts/&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;配置&#34;&gt;配置&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p ~/.kube/config
 # 将master的kubeconfig拷贝到~/.kube/config/

@@ -268,8 +268,8 @@
     <link rel="manifest" href="/index.webmanifest" />
   
 
-  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
   <link rel="canonical" href="/post/harbor/" />
 
@@ -290,8 +290,8 @@
   <meta property="og:site_name" content="Donald Blog" />
   <meta property="og:url" content="/post/harbor/" />
   <meta property="og:title" content="使用helm安装harbor | Donald Blog" />
-  <meta property="og:description" content="helm安装harbor教程和遇见的坑" /><meta property="og:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" />
-    <meta property="twitter:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="zh-Hans" />
+  <meta property="og:description" content="helm安装harbor教程和遇见的坑" /><meta property="og:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
   
     
       <meta
@@ -340,7 +340,7 @@
     "name": "Donald Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png"
+      "url": "/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "helm安装harbor教程和遇见的坑"
@@ -655,7 +655,7 @@
 
     <div class="article-style">
       <h2 id="helm下载harbor">helm下载harbor</h2>
-<p>helm repo add harbor <a href="https://helm.goharbor.io">https://helm.goharbor.io</a>
+<p>helm repo add harbor <a href="https://helm.goharbor.io" target="_blank" rel="noopener">https://helm.goharbor.io</a>
 helm fetch harbor/harbor &ndash;untar
 helm pull harbor/harbor</p>
 <h2 id="配置主要地方">配置（主要地方）</h2>
@@ -681,7 +681,7 @@ for example：</p>
 </blockquote>
 <p>docker默认配置针对127.0.0.0/8本地回环地址不验证，但还有10.0.0.0/8这个内网</p>
 <h3 id="externalurl">externalURL</h3>
-<p>协议：//ip：端口</p>
+<p>协议://ip：端口</p>
 <h3 id="pvc配置">pvc配置</h3>
 <p>提供storageClass即可</p>
 <h2 id="配置docker-http登录">配置docker http登录</h2>
@@ -907,6 +907,15 @@ for example：</p>
 
 
   
+  
+  <div class="article-widget content-widget-hr">
+    <h3>相关</h3>
+    <ul>
+      
+      <li><a href="/post/k8s-mirror/">解决k8s 国外镜像下载问题</a></li>
+      
+    </ul>
+  </div>
   
 
 

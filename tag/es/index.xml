@@ -7,7 +7,7 @@
     <description>es</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>es</title>
       <link>/tag/es/</link>
     </image>
@@ -30,6 +30,17 @@ set false&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;client, err = elastic.NewClient(elastic.SetSniff(false), elastic.SetURL(es_addr))&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;eck-安装es取消安全选项&#34;&gt;eck 安装es，取消安全选项&lt;/h2&gt;
+&lt;h3 id=&#34;eck需要配置&#34;&gt;eck需要配置&lt;/h3&gt;
+&lt;p&gt;setDefaultSecurityContext: false&lt;/p&gt;
+&lt;h3 id=&#34;es-需要配置&#34;&gt;es 需要配置&lt;/h3&gt;
+&lt;p&gt;config:
+xpack.security.enabled: false
+xpack.security.http.ssl.enabled: false
+xpack.security.transport.ssl.enabled: false
+xpack.security.authc.reserved_realm.enabled: false&lt;/p&gt;
+&lt;h3 id=&#34;其他配置&#34;&gt;其他配置&lt;/h3&gt;
+&lt;p&gt;取消就绪检测等&lt;/p&gt;
 </description>
     </item>
     

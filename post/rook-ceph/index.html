@@ -30,9 +30,8 @@
   
     
   
-  <meta name="description" content="清理集群 关闭pods，才能pvc才能被删除
-https://rook.io/docs/rook/v1.7/ceph-teardown.html
-节点磁盘格式化 #!/usr/bin/env bash DISK=&quot;/dev/sdb&quot; # Zap the disk to a fresh, usable state (zap-all is important, b/c MBR has to be clean) # You will have to run this step for all disks." />
+  <meta name="description" content="k8s 安装rook-ceph https://rook.io/docs/rook/v1.7/
+添加新磁盘 #扫描 SCSI总线并添加 SCSI 设备 for host in $(ls /sys/class/scsi_host) ; do echo &quot;- - -&quot; &gt; /sys/class/scsi_host/$host/scan; done #重新扫描 SCSI 总线 for scsi_device in $(ls /sys/class/scsi_device/); do echo 1 &gt; /sys/class/scsi_device/$scsi_device/device/rescan; done #查看已添加的磁盘，能够看到sdb说明添加成功 lsblk  清理集群 关闭pods，才能pvc才能被删除" />
 
   
   <link rel="alternate" hreflang="zh-Hans" href="/post/rook-ceph/" />
@@ -270,8 +269,8 @@ https://rook.io/docs/rook/v1.7/ceph-teardown.html
     <link rel="manifest" href="/index.webmanifest" />
   
 
-  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
   <link rel="canonical" href="/post/rook-ceph/" />
 
@@ -292,10 +291,9 @@ https://rook.io/docs/rook/v1.7/ceph-teardown.html
   <meta property="og:site_name" content="Donald Blog" />
   <meta property="og:url" content="/post/rook-ceph/" />
   <meta property="og:title" content="rook-ceph 踩坑 | Donald Blog" />
-  <meta property="og:description" content="清理集群 关闭pods，才能pvc才能被删除
-https://rook.io/docs/rook/v1.7/ceph-teardown.html
-节点磁盘格式化 #!/usr/bin/env bash DISK=&quot;/dev/sdb&quot; # Zap the disk to a fresh, usable state (zap-all is important, b/c MBR has to be clean) # You will have to run this step for all disks." /><meta property="og:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" />
-    <meta property="twitter:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="zh-Hans" />
+  <meta property="og:description" content="k8s 安装rook-ceph https://rook.io/docs/rook/v1.7/
+添加新磁盘 #扫描 SCSI总线并添加 SCSI 设备 for host in $(ls /sys/class/scsi_host) ; do echo &quot;- - -&quot; &gt; /sys/class/scsi_host/$host/scan; done #重新扫描 SCSI 总线 for scsi_device in $(ls /sys/class/scsi_device/); do echo 1 &gt; /sys/class/scsi_device/$scsi_device/device/rescan; done #查看已添加的磁盘，能够看到sdb说明添加成功 lsblk  清理集群 关闭pods，才能pvc才能被删除" /><meta property="og:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
   
     
       <meta
@@ -344,10 +342,10 @@ https://rook.io/docs/rook/v1.7/ceph-teardown.html
     "name": "Donald Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png"
+      "url": "/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "清理集群 关闭pods，才能pvc才能被删除\nhttps://rook.io/docs/rook/v1.7/ceph-teardown.html\n节点磁盘格式化 #!/usr/bin/env bash DISK=\u0026quot;/dev/sdb\u0026quot; # Zap the disk to a fresh, usable state (zap-all is important, b/c MBR has to be clean) # You will have to run this step for all disks."
+  "description": "k8s 安装rook-ceph https://rook.io/docs/rook/v1.7/\n添加新磁盘 #扫描 SCSI总线并添加 SCSI 设备 for host in $(ls /sys/class/scsi_host) ; do echo \u0026quot;- - -\u0026quot; \u0026gt; /sys/class/scsi_host/$host/scan; done #重新扫描 SCSI 总线 for scsi_device in $(ls /sys/class/scsi_device/); do echo 1 \u0026gt; /sys/class/scsi_device/$scsi_device/device/rescan; done #查看已添加的磁盘，能够看到sdb说明添加成功 lsblk  清理集群 关闭pods，才能pvc才能被删除"
 }
 </script>
 
@@ -658,12 +656,25 @@ https://rook.io/docs/rook/v1.7/ceph-teardown.html
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="清理集群">清理集群</h2>
+      <h2 id="k8s-安装rook-ceph">k8s 安装rook-ceph</h2>
+<p><a href="https://rook.io/docs/rook/v1.7/" target="_blank" rel="noopener">https://rook.io/docs/rook/v1.7/</a></p>
+<h2 id="添加新磁盘">添加新磁盘</h2>
+<pre><code class="language-bash">#扫描 SCSI总线并添加 SCSI 设备
+for host in $(ls /sys/class/scsi_host) ; do echo &quot;- - -&quot; &gt; /sys/class/scsi_host/$host/scan; done
+
+#重新扫描 SCSI 总线
+for scsi_device in $(ls /sys/class/scsi_device/); do echo 1 &gt; /sys/class/scsi_device/$scsi_device/device/rescan; done
+
+#查看已添加的磁盘，能够看到sdb说明添加成功
+lsblk
+</code></pre>
+<h2 id="清理集群">清理集群</h2>
 <p>关闭pods，才能pvc才能被删除</p>
-<p><a href="https://rook.io/docs/rook/v1.7/ceph-teardown.html">https://rook.io/docs/rook/v1.7/ceph-teardown.html</a></p>
+<p><a href="https://rook.io/docs/rook/v1.7/ceph-teardown.html" target="_blank" rel="noopener">https://rook.io/docs/rook/v1.7/ceph-teardown.html</a></p>
 <h2 id="节点磁盘格式化">节点磁盘格式化</h2>
+<p>最好每个磁盘都格式化一下</p>
 <pre><code class="language-bash">#!/usr/bin/env bash
-DISK=&quot;/dev/sdb&quot;
+DISK=&quot;/dev/sdd&quot;
 
 # Zap the disk to a fresh, usable state (zap-all is important, b/c MBR has to be clean)
 
@@ -686,7 +697,23 @@ rm -rf /dev/mapper/ceph--*
 
 # Inform the OS of partition table changes
 partprobe $DISK
+
 </code></pre>
+<h2 id="删除">删除</h2>
+<p>删除Ceph集群后，在之前部署Ceph组件节点的/var/lib/rook/目录，会遗留下Ceph集群的配置信息。
+若之后再部署新的Ceph集群，先把之前Ceph集群的这些信息删除，不然启动monitor会失败；</p>
+<h3 id="坑点">坑点</h3>
+<ol>
+<li>删除前必须先删除所有申请的资源</li>
+<li>记得删除申请的文件系统！！！</li>
+</ol>
+<p>查看资源</p>
+<blockquote>
+<p>kubectl api-resources &ndash;namespaced=true -o name | xargs -n 1 kubectl get &ndash;show-kind &ndash;ignore-not-found -n rook-ceph</p>
+</blockquote>
+<p>使用kubectl edit crd clusters.ceph.rook.io编辑
+Terminating，把finalizers的值删掉，保存</p>
+<p><a href="https://www.codeleading.com/article/5578440677/" target="_blank" rel="noopener">https://www.codeleading.com/article/5578440677/</a></p>
 
     </div>
 
@@ -906,6 +933,8 @@ partprobe $DISK
   <div class="article-widget content-widget-hr">
     <h3>相关</h3>
     <ul>
+      
+      <li><a href="/post/k8s-get-userip/">在k8s中部署的系统获取用户ip</a></li>
       
       <li><a href="/post/cloud/">云原生总结</a></li>
       

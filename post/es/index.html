@@ -268,8 +268,8 @@
     <link rel="manifest" href="/index.webmanifest" />
   
 
-  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
   <link rel="canonical" href="/post/es/" />
 
@@ -290,8 +290,8 @@
   <meta property="og:site_name" content="Donald Blog" />
   <meta property="og:url" content="/post/es/" />
   <meta property="og:title" content="es note | Donald Blog" />
-  <meta property="og:description" content="es 笔记" /><meta property="og:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" />
-    <meta property="twitter:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="zh-Hans" />
+  <meta property="og:description" content="es 笔记" /><meta property="og:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
   
     
       <meta
@@ -340,7 +340,7 @@
     "name": "Donald Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png"
+      "url": "/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "es 笔记"
@@ -667,6 +667,17 @@ set false</p>
 <blockquote>
 <p>client, err = elastic.NewClient(elastic.SetSniff(false), elastic.SetURL(es_addr))</p>
 </blockquote>
+<h2 id="eck-安装es取消安全选项">eck 安装es，取消安全选项</h2>
+<h3 id="eck需要配置">eck需要配置</h3>
+<p>setDefaultSecurityContext: false</p>
+<h3 id="es-需要配置">es 需要配置</h3>
+<p>config:
+xpack.security.enabled: false
+xpack.security.http.ssl.enabled: false
+xpack.security.transport.ssl.enabled: false
+xpack.security.authc.reserved_realm.enabled: false</p>
+<h3 id="其他配置">其他配置</h3>
+<p>取消就绪检测等</p>
 
     </div>
 

@@ -5,12 +5,70 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Donald Blog</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 19 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Donald Blog</title>
       <link>/</link>
     </image>
+    
+    <item>
+      <title>个人博客搜索引擎</title>
+      <link>/post/blog-search/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>/post/blog-search/</guid>
+      <description>&lt;h2 id=&#34;1期需求整理&#34;&gt;1期需求整理&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;全文搜索&lt;/li&gt;
+&lt;li&gt;指定语言&lt;/li&gt;
+&lt;li&gt;个人博客上传收录-进行爬取或rss&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;系统设计&#34;&gt;系统设计&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;使用gin web框架&lt;/li&gt;
+&lt;li&gt;ES做全文搜索&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>在k8s中部署的系统获取用户ip</title>
+      <link>/post/k8s-get-userip/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>/post/k8s-get-userip/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;k8s Cluster模式 访问任何节点ip自带路由跳转(反向代理？)，因此后端获取到的是转换过一次的ip，而不是用户真实ip&lt;/p&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
+&lt;p&gt;设置：externalTrafficPolicy: Local&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>解决k8s 国外镜像下载问题</title>
+      <link>/post/k8s-mirror/</link>
+      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/post/k8s-mirror/</guid>
+      <description>&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
+&lt;p&gt;所有国内镜像库都不可用&lt;/p&gt;
+&lt;h2 id=&#34;解决方法-设置代理&#34;&gt;解决方法-设置代理&lt;/h2&gt;
+&lt;p&gt;docker 为service，配置代理方法如下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：将国内库与私有库设置为no_proxy&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;docker-配置代理&#34;&gt;docker 配置代理&lt;/h3&gt;
+&lt;p&gt;sudo mkdir -p /etc/systemd/system/docker.service.d&lt;/p&gt;
+&lt;p&gt;cat &amp;laquo;EOF | sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service]
+Environment=&amp;ldquo;HTTP_PROXY=socks5://10.67.15.212:1080&amp;rdquo;
+Environment=&amp;ldquo;HTTPS_PROXY=socks5://10.67.15.212:1080&amp;rdquo;
+Environment=&amp;ldquo;NO_PROXY=localhost,127.0.0.1,docker.mirrors.ustc.edu.cn,docker.io,docker.com,registry.cn-hangzhou.aliyuncs.com,core.harbor.intra.com,10.67.15.211:30003&amp;rdquo;
+EOF&lt;/p&gt;
+&lt;p&gt;sudo systemctl daemon-reload
+sudo systemctl restart docker&lt;/p&gt;
+&lt;h4 id=&#34;踩坑&#34;&gt;踩坑&lt;/h4&gt;
+&lt;p&gt;这两个官方域名也不能代理docker.io,docker.com&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>解决在vscode中go mod 不在当前目录下的问题</title>
@@ -20,7 +78,7 @@
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
 &lt;p&gt;gopls 在0.7版本之前不存在此问题，0.7之后，gopls 在go.mod 不在当前目录下的情况下，会报错，提示找不到 go.mod 文件。&lt;/p&gt;
 &lt;h2 id=&#34;gopls设置&#34;&gt;gopls设置&lt;/h2&gt;
-&lt;p&gt;参考gopls 文档： &lt;a href=&#34;https://github.com/golang/tools/blob/master/gopls/doc/settings.md&#34;&gt;https://github.com/golang/tools/blob/master/gopls/doc/settings.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考gopls 文档： &lt;a href=&#34;https://github.com/golang/tools/blob/master/gopls/doc/settings.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/golang/tools/blob/master/gopls/doc/settings.md&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;报错的原因&#34;&gt;报错的原因&lt;/h3&gt;
 &lt;p&gt;experimentalWorkspaceModule bool&lt;/p&gt;
 &lt;p&gt;This setting is experimental and may be deleted.
@@ -44,12 +102,25 @@ experimentalWorkspaceModule opts a user into the experimental support for multi-
       <link>/post/rook-ceph/</link>
       <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
       <guid>/post/rook-ceph/</guid>
-      <description>&lt;h2 id=&#34;清理集群&#34;&gt;清理集群&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;k8s-安装rook-ceph&#34;&gt;k8s 安装rook-ceph&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://rook.io/docs/rook/v1.7/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://rook.io/docs/rook/v1.7/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;添加新磁盘&#34;&gt;添加新磁盘&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#扫描 SCSI总线并添加 SCSI 设备
+for host in $(ls /sys/class/scsi_host) ; do echo &amp;quot;- - -&amp;quot; &amp;gt; /sys/class/scsi_host/$host/scan; done
+
+#重新扫描 SCSI 总线
+for scsi_device in $(ls /sys/class/scsi_device/); do echo 1 &amp;gt; /sys/class/scsi_device/$scsi_device/device/rescan; done
+
+#查看已添加的磁盘，能够看到sdb说明添加成功
+lsblk
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;清理集群&#34;&gt;清理集群&lt;/h2&gt;
 &lt;p&gt;关闭pods，才能pvc才能被删除&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://rook.io/docs/rook/v1.7/ceph-teardown.html&#34;&gt;https://rook.io/docs/rook/v1.7/ceph-teardown.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rook.io/docs/rook/v1.7/ceph-teardown.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://rook.io/docs/rook/v1.7/ceph-teardown.html&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;节点磁盘格式化&#34;&gt;节点磁盘格式化&lt;/h2&gt;
+&lt;p&gt;最好每个磁盘都格式化一下&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/usr/bin/env bash
-DISK=&amp;quot;/dev/sdb&amp;quot;
+DISK=&amp;quot;/dev/sdd&amp;quot;
 
 # Zap the disk to a fresh, usable state (zap-all is important, b/c MBR has to be clean)
 
@@ -72,7 +143,23 @@ rm -rf /dev/mapper/ceph--*
 
 # Inform the OS of partition table changes
 partprobe $DISK
+
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;删除&#34;&gt;删除&lt;/h2&gt;
+&lt;p&gt;删除Ceph集群后，在之前部署Ceph组件节点的/var/lib/rook/目录，会遗留下Ceph集群的配置信息。
+若之后再部署新的Ceph集群，先把之前Ceph集群的这些信息删除，不然启动monitor会失败；&lt;/p&gt;
+&lt;h3 id=&#34;坑点&#34;&gt;坑点&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;删除前必须先删除所有申请的资源&lt;/li&gt;
+&lt;li&gt;记得删除申请的文件系统！！！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;查看资源&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;kubectl api-resources &amp;ndash;namespaced=true -o name | xargs -n 1 kubectl get &amp;ndash;show-kind &amp;ndash;ignore-not-found -n rook-ceph&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用kubectl edit crd clusters.ceph.rook.io编辑
+Terminating，把finalizers的值删掉，保存&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.codeleading.com/article/5578440677/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.codeleading.com/article/5578440677/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -93,16 +180,6 @@ partprobe $DISK
 &lt;blockquote&gt;
 &lt;p&gt;module gitlab.com/xxx&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>分布式id生成服务-雪花算法</title>
-      <link>/post/snowflake-go/</link>
-      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/snowflake-go/</guid>
-      <description>&lt;h2 id=&#34;用go实现一个分布式id生成服务grpchttp&#34;&gt;用go实现一个分布式id生成服务，grpc，http&lt;/h2&gt;
-&lt;p&gt;主要是workid的生成&lt;/p&gt;
 </description>
     </item>
     
@@ -150,7 +227,7 @@ partprobe $DISK
 &lt;/ul&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;p&gt;官方文档
-&lt;a href=&#34;https://www.telepresence.io/docs/latest/howtos/intercepts/&#34;&gt;https://www.telepresence.io/docs/latest/howtos/intercepts/&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://www.telepresence.io/docs/latest/howtos/intercepts/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.telepresence.io/docs/latest/howtos/intercepts/&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;配置&#34;&gt;配置&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p ~/.kube/config
 # 将master的kubeconfig拷贝到~/.kube/config/
@@ -188,6 +265,17 @@ set false&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;client, err = elastic.NewClient(elastic.SetSniff(false), elastic.SetURL(es_addr))&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;eck-安装es取消安全选项&#34;&gt;eck 安装es，取消安全选项&lt;/h2&gt;
+&lt;h3 id=&#34;eck需要配置&#34;&gt;eck需要配置&lt;/h3&gt;
+&lt;p&gt;setDefaultSecurityContext: false&lt;/p&gt;
+&lt;h3 id=&#34;es-需要配置&#34;&gt;es 需要配置&lt;/h3&gt;
+&lt;p&gt;config:
+xpack.security.enabled: false
+xpack.security.http.ssl.enabled: false
+xpack.security.transport.ssl.enabled: false
+xpack.security.authc.reserved_realm.enabled: false&lt;/p&gt;
+&lt;h3 id=&#34;其他配置&#34;&gt;其他配置&lt;/h3&gt;
+&lt;p&gt;取消就绪检测等&lt;/p&gt;
 </description>
     </item>
     
@@ -313,7 +401,7 @@ repeated foo results = 1;
 }&lt;/p&gt;
 &lt;h2 id=&#34;导入官方提供的proto文件time&#34;&gt;导入官方提供的proto文件，time&lt;/h2&gt;
 &lt;p&gt;放置到/usr/local/include
-&lt;a href=&#34;https://ask.csdn.net/questions/1010240&#34;&gt;https://ask.csdn.net/questions/1010240&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://ask.csdn.net/questions/1010240&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://ask.csdn.net/questions/1010240&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -323,7 +411,7 @@ repeated foo results = 1;
       <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
       <guid>/post/mysql/</guid>
       <description>&lt;h2 id=&#34;好的总结&#34;&gt;好的总结&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/guorui_java/article/details/118558095&#34;&gt;https://blog.csdn.net/guorui_java/article/details/118558095&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/guorui_java/article/details/118558095&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://blog.csdn.net/guorui_java/article/details/118558095&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;mysql修改密码&#34;&gt;mysql修改密码&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;ALTER USER &amp;lsquo;root&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; IDENTIFIED WITH mysql_native_password BY &amp;lsquo;在这里输入你的密码&amp;rsquo;;&lt;/p&gt;
@@ -381,7 +469,7 @@ grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&a
 &lt;li&gt;Chaos Engineering(混沌工程)-chaosmonkey&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;腾讯文章&#34;&gt;腾讯文章&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&amp;amp;mid=2649760560&amp;amp;idx=1&amp;amp;sn=0e644916ed8a8bdcd65e903fb3498e74&amp;amp;chksm=beccb04b89bb395d4461f67cb319293dccc5c51047892bb7692d93e761d67a652eacd83ac62d&amp;amp;mpshare=1&amp;amp;scene=23&amp;amp;srcid=0616zu8zL3I5bYdVMbtposEu&amp;amp;sharer_sharetime=1623846102060&amp;amp;sharer_shareid=8a8cb9782b5089d1e0f623249d1fd45c#rd&#34;&gt;https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&amp;amp;mid=2649760560&amp;amp;idx=1&amp;amp;sn=0e644916ed8a8bdcd65e903fb3498e74&amp;amp;chksm=beccb04b89bb395d4461f67cb319293dccc5c51047892bb7692d93e761d67a652eacd83ac62d&amp;amp;mpshare=1&amp;amp;scene=23&amp;amp;srcid=0616zu8zL3I5bYdVMbtposEu&amp;amp;sharer_sharetime=1623846102060&amp;amp;sharer_shareid=8a8cb9782b5089d1e0f623249d1fd45c#rd&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&amp;amp;mid=2649760560&amp;amp;idx=1&amp;amp;sn=0e644916ed8a8bdcd65e903fb3498e74&amp;amp;chksm=beccb04b89bb395d4461f67cb319293dccc5c51047892bb7692d93e761d67a652eacd83ac62d&amp;amp;mpshare=1&amp;amp;scene=23&amp;amp;srcid=0616zu8zL3I5bYdVMbtposEu&amp;amp;sharer_sharetime=1623846102060&amp;amp;sharer_shareid=8a8cb9782b5089d1e0f623249d1fd45c#rd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&amp;mid=2649760560&amp;idx=1&amp;sn=0e644916ed8a8bdcd65e903fb3498e74&amp;chksm=beccb04b89bb395d4461f67cb319293dccc5c51047892bb7692d93e761d67a652eacd83ac62d&amp;mpshare=1&amp;scene=23&amp;srcid=0616zu8zL3I5bYdVMbtposEu&amp;sharer_sharetime=1623846102060&amp;sharer_shareid=8a8cb9782b5089d1e0f623249d1fd45c#rd&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -391,7 +479,7 @@ grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&a
       <pubDate>Fri, 11 Jun 2021 00:00:00 +0000</pubDate>
       <guid>/post/harbor/</guid>
       <description>&lt;h2 id=&#34;helm下载harbor&#34;&gt;helm下载harbor&lt;/h2&gt;
-&lt;p&gt;helm repo add harbor &lt;a href=&#34;https://helm.goharbor.io&#34;&gt;https://helm.goharbor.io&lt;/a&gt;
+&lt;p&gt;helm repo add harbor &lt;a href=&#34;https://helm.goharbor.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://helm.goharbor.io&lt;/a&gt;
 helm fetch harbor/harbor &amp;ndash;untar
 helm pull harbor/harbor&lt;/p&gt;
 &lt;h2 id=&#34;配置主要地方&#34;&gt;配置（主要地方）&lt;/h2&gt;
@@ -417,7 +505,7 @@ for example：&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;docker默认配置针对127.0.0.0/8本地回环地址不验证，但还有10.0.0.0/8这个内网&lt;/p&gt;
 &lt;h3 id=&#34;externalurl&#34;&gt;externalURL&lt;/h3&gt;
-&lt;p&gt;协议：//ip：端口&lt;/p&gt;
+&lt;p&gt;协议://ip：端口&lt;/p&gt;
 &lt;h3 id=&#34;pvc配置&#34;&gt;pvc配置&lt;/h3&gt;
 &lt;p&gt;提供storageClass即可&lt;/p&gt;
 &lt;h2 id=&#34;配置docker-http登录&#34;&gt;配置docker http登录&lt;/h2&gt;
@@ -536,7 +624,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-458612739&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-253791648&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -546,7 +634,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-458612739&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-253791648&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -812,7 +900,7 @@ date: 2019-09-01
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jupyter nbconvert index.ipynb --to markdown --NbConvertApp.output_files_dir=.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
-&lt;p&gt;This post was created with Jupyter. The orginal files can be found at &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&#34;&gt;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This post was created with Jupyter. The orginal files can be found at &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

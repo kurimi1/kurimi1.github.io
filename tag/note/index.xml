@@ -7,7 +7,7 @@
     <description>note</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>note</title>
       <link>/tag/note/</link>
     </image>
@@ -38,7 +38,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;p&gt;官方文档
-&lt;a href=&#34;https://www.telepresence.io/docs/latest/howtos/intercepts/&#34;&gt;https://www.telepresence.io/docs/latest/howtos/intercepts/&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://www.telepresence.io/docs/latest/howtos/intercepts/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.telepresence.io/docs/latest/howtos/intercepts/&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;配置&#34;&gt;配置&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p ~/.kube/config
 # 将master的kubeconfig拷贝到~/.kube/config/
@@ -76,6 +76,17 @@ set false&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;client, err = elastic.NewClient(elastic.SetSniff(false), elastic.SetURL(es_addr))&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;eck-安装es取消安全选项&#34;&gt;eck 安装es，取消安全选项&lt;/h2&gt;
+&lt;h3 id=&#34;eck需要配置&#34;&gt;eck需要配置&lt;/h3&gt;
+&lt;p&gt;setDefaultSecurityContext: false&lt;/p&gt;
+&lt;h3 id=&#34;es-需要配置&#34;&gt;es 需要配置&lt;/h3&gt;
+&lt;p&gt;config:
+xpack.security.enabled: false
+xpack.security.http.ssl.enabled: false
+xpack.security.transport.ssl.enabled: false
+xpack.security.authc.reserved_realm.enabled: false&lt;/p&gt;
+&lt;h3 id=&#34;其他配置&#34;&gt;其他配置&lt;/h3&gt;
+&lt;p&gt;取消就绪检测等&lt;/p&gt;
 </description>
     </item>
     
@@ -148,7 +159,7 @@ repeated foo results = 1;
 }&lt;/p&gt;
 &lt;h2 id=&#34;导入官方提供的proto文件time&#34;&gt;导入官方提供的proto文件，time&lt;/h2&gt;
 &lt;p&gt;放置到/usr/local/include
-&lt;a href=&#34;https://ask.csdn.net/questions/1010240&#34;&gt;https://ask.csdn.net/questions/1010240&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://ask.csdn.net/questions/1010240&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://ask.csdn.net/questions/1010240&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -158,7 +169,7 @@ repeated foo results = 1;
       <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
       <guid>/post/mysql/</guid>
       <description>&lt;h2 id=&#34;好的总结&#34;&gt;好的总结&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/guorui_java/article/details/118558095&#34;&gt;https://blog.csdn.net/guorui_java/article/details/118558095&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/guorui_java/article/details/118558095&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://blog.csdn.net/guorui_java/article/details/118558095&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;mysql修改密码&#34;&gt;mysql修改密码&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;ALTER USER &amp;lsquo;root&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; IDENTIFIED WITH mysql_native_password BY &amp;lsquo;在这里输入你的密码&amp;rsquo;;&lt;/p&gt;
