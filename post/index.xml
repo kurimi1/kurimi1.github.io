@@ -2,21 +2,85 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts | Donald Blog</title>
-    <link>/post/</link>
-      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/post/</link>
+      <atom:link href="https://kurimi1.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 07 Mar 2022 11:29:57 +0800</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Posts</title>
-      <link>/post/</link>
+      <link>https://kurimi1.github.io/post/</link>
     </image>
     
     <item>
+      <title>Hugo Notes</title>
+      <link>https://kurimi1.github.io/post/hugo/</link>
+      <pubDate>Mon, 07 Mar 2022 11:29:57 +0800</pubDate>
+      <guid>https://kurimi1.github.io/post/hugo/</guid>
+      <description>&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
+&lt;p&gt;有些主题可能不支持，一定要下载extended版本。&lt;/p&gt;
+&lt;h2 id=&#34;本地预览命令&#34;&gt;本地预览命令&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;hugo server &amp;ndash;bind 0.0.0.0 -D&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;-D 代表编译草稿&lt;/p&gt;
+&lt;h2 id=&#34;创建post&#34;&gt;创建post&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;hugo new &amp;ndash;kind post post/my-article-name&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;编译命令&#34;&gt;编译命令&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;hugo -D&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;发布&#34;&gt;发布&lt;/h2&gt;
+&lt;p&gt;push 到 github&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git add .
+git commit -m &amp;quot;update&amp;quot;
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Docker Link Localnet</title>
+      <link>https://kurimi1.github.io/post/docker-link-localnet/</link>
+      <pubDate>Fri, 04 Mar 2022 18:21:45 +0800</pubDate>
+      <guid>https://kurimi1.github.io/post/docker-link-localnet/</guid>
+      <description>&lt;h2 id=&#34;设置net为host&#34;&gt;设置net为host&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker run &amp;ndash;net host&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可直接访问&lt;/p&gt;
+&lt;h2 id=&#34;使用默认的bridge&#34;&gt;使用默认的bridge&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker network inspect bridge&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看网关，通过网关访问本地网络&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>go控制协程并发数量</title>
+      <link>https://kurimi1.github.io/post/go-control-goroutine-nums/</link>
+      <pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://kurimi1.github.io/post/go-control-goroutine-nums/</guid>
+      <description>&lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;利用channel&lt;/li&gt;
+&lt;li&gt;第三方库ants，协程池&lt;/li&gt;
+&lt;li&gt;官方包sync/x/Semaphore&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;协程池可以复用，节约内存，可以动态调整大小。&lt;/p&gt;
+&lt;p&gt;channel限制并发，可以动态改变吗？&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>个人博客搜索引擎</title>
-      <link>/post/blog-search/</link>
+      <link>https://kurimi1.github.io/post/blog-search/</link>
       <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>/post/blog-search/</guid>
+      <guid>https://kurimi1.github.io/post/blog-search/</guid>
       <description>&lt;h2 id=&#34;1期需求整理&#34;&gt;1期需求整理&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;全文搜索&lt;/li&gt;
@@ -33,9 +97,9 @@
     
     <item>
       <title>在k8s中部署的系统获取用户ip</title>
-      <link>/post/k8s-get-userip/</link>
+      <link>https://kurimi1.github.io/post/k8s-get-userip/</link>
       <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>/post/k8s-get-userip/</guid>
+      <guid>https://kurimi1.github.io/post/k8s-get-userip/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;k8s Cluster模式 访问任何节点ip自带路由跳转(反向代理？)，因此后端获取到的是转换过一次的ip，而不是用户真实ip&lt;/p&gt;
 &lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
@@ -45,9 +109,9 @@
     
     <item>
       <title>解决k8s 国外镜像下载问题</title>
-      <link>/post/k8s-mirror/</link>
+      <link>https://kurimi1.github.io/post/k8s-mirror/</link>
       <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>/post/k8s-mirror/</guid>
+      <guid>https://kurimi1.github.io/post/k8s-mirror/</guid>
       <description>&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
 &lt;p&gt;所有国内镜像库都不可用&lt;/p&gt;
 &lt;h2 id=&#34;解决方法-设置代理&#34;&gt;解决方法-设置代理&lt;/h2&gt;
@@ -72,9 +136,9 @@ sudo systemctl restart docker&lt;/p&gt;
     
     <item>
       <title>解决在vscode中go mod 不在当前目录下的问题</title>
-      <link>/post/set-vscode-gopls/</link>
+      <link>https://kurimi1.github.io/post/set-vscode-gopls/</link>
       <pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>/post/set-vscode-gopls/</guid>
+      <guid>https://kurimi1.github.io/post/set-vscode-gopls/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
 &lt;p&gt;gopls 在0.7版本之前不存在此问题，0.7之后，gopls 在go.mod 不在当前目录下的情况下，会报错，提示找不到 go.mod 文件。&lt;/p&gt;
 &lt;h2 id=&#34;gopls设置&#34;&gt;gopls设置&lt;/h2&gt;
@@ -86,7 +150,27 @@ experimentalWorkspaceModule opts a user into the experimental support for multi-
 &lt;p&gt;Default: false.&lt;/p&gt;
 &lt;h2 id=&#34;vscode-中设置&#34;&gt;vscode 中设置&lt;/h2&gt;
 &lt;p&gt;在插件设置最底下
-&lt;img src=&#34;./gopls.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./gopls.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
     &amp;quot;gopls&amp;quot;: {
         &amp;quot;experimentalWorkspaceModule&amp;quot;: true
@@ -99,9 +183,9 @@ experimentalWorkspaceModule opts a user into the experimental support for multi-
     
     <item>
       <title>rook-ceph 踩坑</title>
-      <link>/post/rook-ceph/</link>
+      <link>https://kurimi1.github.io/post/rook-ceph/</link>
       <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>/post/rook-ceph/</guid>
+      <guid>https://kurimi1.github.io/post/rook-ceph/</guid>
       <description>&lt;h2 id=&#34;k8s-安装rook-ceph&#34;&gt;k8s 安装rook-ceph&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://rook.io/docs/rook/v1.7/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://rook.io/docs/rook/v1.7/&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;添加新磁盘&#34;&gt;添加新磁盘&lt;/h2&gt;
@@ -165,9 +249,9 @@ Terminating，把finalizers的值删掉，保存&lt;/p&gt;
     
     <item>
       <title>goalng使用gitlab私有库</title>
-      <link>/post/golang-use-private-libraries/</link>
+      <link>https://kurimi1.github.io/post/golang-use-private-libraries/</link>
       <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>/post/golang-use-private-libraries/</guid>
+      <guid>https://kurimi1.github.io/post/golang-use-private-libraries/</guid>
       <description>&lt;h2 id=&#34;设置私有库&#34;&gt;设置私有库&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;go env -w GOPRIVATE=&amp;ldquo;gitlab.com&amp;rdquo;&lt;/p&gt;
@@ -185,27 +269,27 @@ Terminating，把finalizers的值删掉，保存&lt;/p&gt;
     
     <item>
       <title>基于区块链的匿名通信系统</title>
-      <link>/post/im-blockchain/</link>
+      <link>https://kurimi1.github.io/post/im-blockchain/</link>
       <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/im-blockchain/</guid>
+      <guid>https://kurimi1.github.io/post/im-blockchain/</guid>
       <description>&lt;p&gt;对于上面所说的中间人攻击，我觉得可以用区块链解决，所有人公开公钥且公钥不和用户绑定。发消息时用公钥加密广播，仅持有此公钥的私钥的人才能看到所发消息。但存在一个消息泛滥问题，所有人都可以发消息给这个公钥，然而数字货币不会存在（因为没人会随便给你转账），这个问题可以用发消息+数字货币的方式解决。&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>osint和recon工具或系统汇总</title>
-      <link>/post/reconosint-toolssystem/</link>
+      <link>https://kurimi1.github.io/post/reconosint-toolssystem/</link>
       <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/reconosint-toolssystem/</guid>
+      <guid>https://kurimi1.github.io/post/reconosint-toolssystem/</guid>
       <description>&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
 </description>
     </item>
     
     <item>
       <title>golang的一些笔记</title>
-      <link>/post/go-base/</link>
+      <link>https://kurimi1.github.io/post/go-base/</link>
       <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-base/</guid>
+      <guid>https://kurimi1.github.io/post/go-base/</guid>
       <description>&lt;h2 id=&#34;多态的方法&#34;&gt;多态的方法&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;常用的interface接口&lt;/li&gt;
@@ -216,9 +300,9 @@ Terminating，把finalizers的值删掉，保存&lt;/p&gt;
     
     <item>
       <title>使用Telepresence本地开发调试k8s微服务</title>
-      <link>/post/telepresence/</link>
+      <link>https://kurimi1.github.io/post/telepresence/</link>
       <pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/telepresence/</guid>
+      <guid>https://kurimi1.github.io/post/telepresence/</guid>
       <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
 &lt;p&gt;借助Telepresence实现以下：&lt;/p&gt;
 &lt;ul&gt;
@@ -249,9 +333,9 @@ vim config
     
     <item>
       <title>es note</title>
-      <link>/post/es/</link>
+      <link>https://kurimi1.github.io/post/es/</link>
       <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/es/</guid>
+      <guid>https://kurimi1.github.io/post/es/</guid>
       <description>&lt;h2 id=&#34;es7中-golang客户端聚合查询&#34;&gt;es7中 golang客户端聚合查询&lt;/h2&gt;
 &lt;p&gt;es7 中term无法使用多字段因此使用bool聚合查询
 must下匹配，filter进行过滤，range定义范围&lt;/p&gt;
@@ -281,9 +365,9 @@ xpack.security.authc.reserved_realm.enabled: false&lt;/p&gt;
     
     <item>
       <title>redis note</title>
-      <link>/post/redis/</link>
+      <link>https://kurimi1.github.io/post/redis/</link>
       <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/redis/</guid>
+      <guid>https://kurimi1.github.io/post/redis/</guid>
       <description>&lt;h2 id=&#34;获取所有key&#34;&gt;获取所有key&lt;/h2&gt;
 &lt;p&gt;keys *&lt;/p&gt;
 &lt;h2 id=&#34;docker-安装redis&#34;&gt;docker 安装redis&lt;/h2&gt;
@@ -298,9 +382,9 @@ docker run &amp;ndash;name some-redis -d -p 6379:6379 redis redis-server &amp;nd
     
     <item>
       <title>go test</title>
-      <link>/post/go-test/</link>
+      <link>https://kurimi1.github.io/post/go-test/</link>
       <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-test/</guid>
+      <guid>https://kurimi1.github.io/post/go-test/</guid>
       <description>&lt;h2 id=&#34;指定测试函数&#34;&gt;指定测试函数&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;go test -v -test.run xxxx&lt;/p&gt;
@@ -309,24 +393,10 @@ docker run &amp;ndash;name some-redis -d -p 6379:6379 redis redis-server &amp;nd
     </item>
     
     <item>
-      <title>hugo note</title>
-      <link>/post/hugo/</link>
-      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/hugo/</guid>
-      <description>&lt;h2 id=&#34;本地预览命令&#34;&gt;本地预览命令&lt;/h2&gt;
-&lt;p&gt;hugo server &amp;ndash;bind 0.0.0.0 -D&lt;/p&gt;
-&lt;h2 id=&#34;编译命令&#34;&gt;编译命令&lt;/h2&gt;
-&lt;p&gt;hugo -D&lt;/p&gt;
-&lt;h2 id=&#34;发布&#34;&gt;发布&lt;/h2&gt;
-&lt;p&gt;push 到 github&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>关于使用https的坑</title>
-      <link>/post/https-verify/</link>
+      <link>https://kurimi1.github.io/post/https-verify/</link>
       <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/https-verify/</guid>
+      <guid>https://kurimi1.github.io/post/https-verify/</guid>
       <description>&lt;h2 id=&#34;x509-cannot-validate-certificate-for-xxxx-because-it-doesnt-contain-any-ip-sans-解决方法&#34;&gt;x509: cannot validate certificate for x.x.x.x because it doesn&amp;rsquo;t contain any IP SANs 解决方法&lt;/h2&gt;
 &lt;p&gt;这种问题通常出现在ip使用https时(k8s自动生成证书)。因为k8s生成的证书的Subject Alternative Name都是DNS解析的，所以使用nodeport发布服务时node的ip地址不在验证域中，解决方法有两种&lt;/p&gt;
 &lt;h3 id=&#34;1客户端取消证书验证&#34;&gt;1：客户端取消证书验证&lt;/h3&gt;
@@ -363,9 +433,9 @@ DNS.1 = localhost&lt;/p&gt;
     
     <item>
       <title>go-zero note</title>
-      <link>/post/go-zero/</link>
+      <link>https://kurimi1.github.io/post/go-zero/</link>
       <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-zero/</guid>
+      <guid>https://kurimi1.github.io/post/go-zero/</guid>
       <description>&lt;h2 id=&#34;config使用环境变量&#34;&gt;config使用环境变量&lt;/h2&gt;
 &lt;p&gt;添加option&lt;/p&gt;
 &lt;blockquote&gt;
@@ -378,9 +448,9 @@ DNS.1 = localhost&lt;/p&gt;
     
     <item>
       <title>protobuf note</title>
-      <link>/post/protobuf/</link>
+      <link>https://kurimi1.github.io/post/protobuf/</link>
       <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/protobuf/</guid>
+      <guid>https://kurimi1.github.io/post/protobuf/</guid>
       <description>&lt;h2 id=&#34;proto3定义数组类型&#34;&gt;proto3定义数组类型&lt;/h2&gt;
 &lt;p&gt;repeated允许字段重复，对于Go语言来说，它会编译成数组(slice of type)类型的格式。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -407,19 +477,19 @@ repeated foo results = 1;
     
     <item>
       <title>mysql</title>
-      <link>/post/mysql/</link>
+      <link>https://kurimi1.github.io/post/mysql/</link>
       <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/mysql/</guid>
+      <guid>https://kurimi1.github.io/post/mysql/</guid>
       <description>&lt;h2 id=&#34;好的总结&#34;&gt;好的总结&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/guorui_java/article/details/118558095&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://blog.csdn.net/guorui_java/article/details/118558095&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;mysql修改密码&#34;&gt;mysql修改密码&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;ALTER USER &amp;lsquo;root&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; IDENTIFIED WITH mysql_native_password BY &amp;lsquo;在这里输入你的密码&amp;rsquo;;&lt;/p&gt;
+&lt;p&gt;ALTER USER &amp;lsquo;root&amp;rsquo;@&amp;rsquo;localhost&amp;rsquo; IDENTIFIED WITH mysql_native_password BY &amp;lsquo;在这里输入你的密码&amp;rsquo;;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;mysql-创建用户及授权&#34;&gt;mysql 创建用户及授权&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;create user &amp;lsquo;test&amp;rsquo;@&#39;%&#39; identified with mysql_native_password BY &amp;lsquo;密码&amp;rsquo;;
-grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; with grant option;&lt;/p&gt;
+&lt;p&gt;create user &amp;rsquo;test&amp;rsquo;@&amp;rsquo;%&amp;rsquo; identified with mysql_native_password BY &amp;lsquo;密码&amp;rsquo;;
+grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;rsquo;test1&amp;rsquo;@&amp;rsquo;localhost&amp;rsquo; with grant option;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;更新权限&lt;/p&gt;
 &lt;blockquote&gt;
@@ -440,9 +510,9 @@ grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&a
     
     <item>
       <title>vscode设置proto插件</title>
-      <link>/post/set-vscode-proto-plugin/</link>
+      <link>https://kurimi1.github.io/post/set-vscode-proto-plugin/</link>
       <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/set-vscode-proto-plugin/</guid>
+      <guid>https://kurimi1.github.io/post/set-vscode-proto-plugin/</guid>
       <description>&lt;h2 id=&#34;安装插件&#34;&gt;安装插件&lt;/h2&gt;
 &lt;p&gt;搜索安装这两个插件，第一个插件会调用第二个插件进行格式化&lt;/p&gt;
 &lt;ul&gt;
@@ -457,9 +527,9 @@ grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&a
     
     <item>
       <title>云原生总结</title>
-      <link>/post/cloud/</link>
+      <link>https://kurimi1.github.io/post/cloud/</link>
       <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/cloud/</guid>
+      <guid>https://kurimi1.github.io/post/cloud/</guid>
       <description>&lt;h2 id=&#34;云原生-主流组件&#34;&gt;云原生-主流组件&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Prometheus&lt;/li&gt;
@@ -475,9 +545,9 @@ grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&a
     
     <item>
       <title>使用helm安装harbor</title>
-      <link>/post/harbor/</link>
+      <link>https://kurimi1.github.io/post/harbor/</link>
       <pubDate>Fri, 11 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/harbor/</guid>
+      <guid>https://kurimi1.github.io/post/harbor/</guid>
       <description>&lt;h2 id=&#34;helm下载harbor&#34;&gt;helm下载harbor&lt;/h2&gt;
 &lt;p&gt;helm repo add harbor &lt;a href=&#34;https://helm.goharbor.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://helm.goharbor.io&lt;/a&gt;
 helm fetch harbor/harbor &amp;ndash;untar
@@ -521,9 +591,9 @@ for example：&lt;/p&gt;
     
     <item>
       <title>Welcome to Wowchemy, the website builder for Hugo</title>
-      <link>/post/getting-started/</link>
+      <link>https://kurimi1.github.io/post/getting-started/</link>
       <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/post/getting-started/</guid>
+      <guid>https://kurimi1.github.io/post/getting-started/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site&lt;/li&gt;
@@ -588,7 +658,7 @@ for example：&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-&lt;p&gt;Wowchemy and its templates come with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Wowchemy and its templates come with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site  in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/customization&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully customizable.&lt;/p&gt;
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 &lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
@@ -598,9 +668,9 @@ for example：&lt;/p&gt;
     
     <item>
       <title>Writing technical content in Academic</title>
-      <link>/post/writing-technical-content/</link>
+      <link>https://kurimi1.github.io/post/writing-technical-content/</link>
       <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>/post/writing-technical-content/</guid>
+      <guid>https://kurimi1.github.io/post/writing-technical-content/</guid>
       <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
@@ -624,7 +694,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-253791648&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-285963174&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -634,7 +704,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-253791648&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-285963174&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -650,14 +720,14 @@ data.head()
 {\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right |^2}$$&lt;/p&gt;
+&lt;p&gt;$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}&lt;em&gt;{n}) - \nabla F(\mathbf{x}&lt;/em&gt;{n-1}) \right |^2}$$&lt;/p&gt;
 &lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;$\nabla F(\mathbf{x}_{n})$&lt;/code&gt; renders as $\nabla F(\mathbf{x}_{n})$.&lt;/p&gt;
 &lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the &lt;code&gt;\\\\&lt;/code&gt; math linebreak:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;$$f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} &amp;amp; \text{if }k=1, \\\\
 1-p_{0}^{*} &amp;amp; \text{if }k=0.\end{cases}$$
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;$$f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} &amp;amp; \text{if }k=1, \\&lt;br&gt;
+&lt;p&gt;$$f(k;p_{0}^{&lt;em&gt;}) = \begin{cases}p_{0}^{&lt;/em&gt;} &amp;amp; \text{if }k=1, \\
 1-p_{0}^{*} &amp;amp; \text{if }k=0.\end{cases}$$&lt;/p&gt;
 &lt;h3 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h3&gt;
 &lt;p&gt;Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the &lt;code&gt;diagram&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file or by adding &lt;code&gt;diagram: true&lt;/code&gt; to your page front matter.&lt;/p&gt;
@@ -862,13 +932,33 @@ You found me!
     
     <item>
       <title>Display Jupyter Notebooks with Academic</title>
-      <link>/post/jupyter/</link>
+      <link>https://kurimi1.github.io/post/jupyter/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/post/jupyter/</guid>
+      <guid>https://kurimi1.github.io/post/jupyter/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from IPython.core.display import Image
 Image(&#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&#39;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;./index_1_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_1_0.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Welcome to Academic!&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;Welcome to Academic!

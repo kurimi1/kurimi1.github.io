@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>踩坑 | Donald Blog</title>
-    <link>/category/%E8%B8%A9%E5%9D%91/</link>
-      <atom:link href="/category/%E8%B8%A9%E5%9D%91/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/category/%E8%B8%A9%E5%9D%91/</link>
+      <atom:link href="https://kurimi1.github.io/category/%E8%B8%A9%E5%9D%91/index.xml" rel="self" type="application/rss+xml" />
     <description>踩坑</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 14 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>踩坑</title>
-      <link>/category/%E8%B8%A9%E5%9D%91/</link>
+      <link>https://kurimi1.github.io/category/%E8%B8%A9%E5%9D%91/</link>
     </image>
     
     <item>
       <title>解决k8s 国外镜像下载问题</title>
-      <link>/post/k8s-mirror/</link>
+      <link>https://kurimi1.github.io/post/k8s-mirror/</link>
       <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>/post/k8s-mirror/</guid>
+      <guid>https://kurimi1.github.io/post/k8s-mirror/</guid>
       <description>&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
 &lt;p&gt;所有国内镜像库都不可用&lt;/p&gt;
 &lt;h2 id=&#34;解决方法-设置代理&#34;&gt;解决方法-设置代理&lt;/h2&gt;
@@ -41,9 +41,9 @@ sudo systemctl restart docker&lt;/p&gt;
     
     <item>
       <title>关于使用https的坑</title>
-      <link>/post/https-verify/</link>
+      <link>https://kurimi1.github.io/post/https-verify/</link>
       <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/https-verify/</guid>
+      <guid>https://kurimi1.github.io/post/https-verify/</guid>
       <description>&lt;h2 id=&#34;x509-cannot-validate-certificate-for-xxxx-because-it-doesnt-contain-any-ip-sans-解决方法&#34;&gt;x509: cannot validate certificate for x.x.x.x because it doesn&amp;rsquo;t contain any IP SANs 解决方法&lt;/h2&gt;
 &lt;p&gt;这种问题通常出现在ip使用https时(k8s自动生成证书)。因为k8s生成的证书的Subject Alternative Name都是DNS解析的，所以使用nodeport发布服务时node的ip地址不在验证域中，解决方法有两种&lt;/p&gt;
 &lt;h3 id=&#34;1客户端取消证书验证&#34;&gt;1：客户端取消证书验证&lt;/h3&gt;
@@ -80,9 +80,9 @@ DNS.1 = localhost&lt;/p&gt;
     
     <item>
       <title>go-zero note</title>
-      <link>/post/go-zero/</link>
+      <link>https://kurimi1.github.io/post/go-zero/</link>
       <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-zero/</guid>
+      <guid>https://kurimi1.github.io/post/go-zero/</guid>
       <description>&lt;h2 id=&#34;config使用环境变量&#34;&gt;config使用环境变量&lt;/h2&gt;
 &lt;p&gt;添加option&lt;/p&gt;
 &lt;blockquote&gt;
@@ -95,9 +95,9 @@ DNS.1 = localhost&lt;/p&gt;
     
     <item>
       <title>protobuf note</title>
-      <link>/post/protobuf/</link>
+      <link>https://kurimi1.github.io/post/protobuf/</link>
       <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/protobuf/</guid>
+      <guid>https://kurimi1.github.io/post/protobuf/</guid>
       <description>&lt;h2 id=&#34;proto3定义数组类型&#34;&gt;proto3定义数组类型&lt;/h2&gt;
 &lt;p&gt;repeated允许字段重复，对于Go语言来说，它会编译成数组(slice of type)类型的格式。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -124,9 +124,9 @@ repeated foo results = 1;
     
     <item>
       <title>使用helm安装harbor</title>
-      <link>/post/harbor/</link>
+      <link>https://kurimi1.github.io/post/harbor/</link>
       <pubDate>Fri, 11 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/harbor/</guid>
+      <guid>https://kurimi1.github.io/post/harbor/</guid>
       <description>&lt;h2 id=&#34;helm下载harbor&#34;&gt;helm下载harbor&lt;/h2&gt;
 &lt;p&gt;helm repo add harbor &lt;a href=&#34;https://helm.goharbor.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://helm.goharbor.io&lt;/a&gt;
 helm fetch harbor/harbor &amp;ndash;untar

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>test | Donald Blog</title>
-    <link>/tag/test/</link>
-      <atom:link href="/tag/test/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/tag/test/</link>
+      <atom:link href="https://kurimi1.github.io/tag/test/index.xml" rel="self" type="application/rss+xml" />
     <description>test</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 08 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>test</title>
-      <link>/tag/test/</link>
+      <link>https://kurimi1.github.io/tag/test/</link>
     </image>
     
     <item>
       <title>go test</title>
-      <link>/post/go-test/</link>
+      <link>https://kurimi1.github.io/post/go-test/</link>
       <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-test/</guid>
+      <guid>https://kurimi1.github.io/post/go-test/</guid>
       <description>&lt;h2 id=&#34;指定测试函数&#34;&gt;指定测试函数&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;go test -v -test.run xxxx&lt;/p&gt;

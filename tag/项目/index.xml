@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>项目 | Donald Blog</title>
-    <link>/tag/%E9%A1%B9%E7%9B%AE/</link>
-      <atom:link href="/tag/%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/tag/%E9%A1%B9%E7%9B%AE/</link>
+      <atom:link href="https://kurimi1.github.io/tag/%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" />
     <description>项目</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>项目</title>
-      <link>/tag/%E9%A1%B9%E7%9B%AE/</link>
+      <link>https://kurimi1.github.io/tag/%E9%A1%B9%E7%9B%AE/</link>
     </image>
     
     <item>
       <title>个人博客搜索引擎</title>
-      <link>/post/blog-search/</link>
+      <link>https://kurimi1.github.io/post/blog-search/</link>
       <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>/post/blog-search/</guid>
+      <guid>https://kurimi1.github.io/post/blog-search/</guid>
       <description>&lt;h2 id=&#34;1期需求整理&#34;&gt;1期需求整理&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;全文搜索&lt;/li&gt;

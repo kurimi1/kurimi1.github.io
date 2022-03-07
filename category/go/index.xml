@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go | Donald Blog</title>
+    <link>https://kurimi1.github.io/category/go/</link>
+      <atom:link href="https://kurimi1.github.io/category/go/index.xml" rel="self" type="application/rss+xml" />
+    <description>go</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 03 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>go</title>
+      <link>https://kurimi1.github.io/category/go/</link>
+    </image>
+    
+    <item>
+      <title>go控制协程并发数量</title>
+      <link>https://kurimi1.github.io/post/go-control-goroutine-nums/</link>
+      <pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://kurimi1.github.io/post/go-control-goroutine-nums/</guid>
+      <description>&lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;利用channel&lt;/li&gt;
+&lt;li&gt;第三方库ants，协程池&lt;/li&gt;
+&lt;li&gt;官方包sync/x/Semaphore&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;协程池可以复用，节约内存，可以动态调整大小。&lt;/p&gt;
+&lt;p&gt;channel限制并发，可以动态改变吗？&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

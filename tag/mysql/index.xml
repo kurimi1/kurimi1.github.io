@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mysql | Donald Blog</title>
-    <link>/tag/mysql/</link>
-      <atom:link href="/tag/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/tag/mysql/</link>
+      <atom:link href="https://kurimi1.github.io/tag/mysql/index.xml" rel="self" type="application/rss+xml" />
     <description>mysql</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 21 Jun 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>mysql</title>
-      <link>/tag/mysql/</link>
+      <link>https://kurimi1.github.io/tag/mysql/</link>
     </image>
     
     <item>
       <title>mysql</title>
-      <link>/post/mysql/</link>
+      <link>https://kurimi1.github.io/post/mysql/</link>
       <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/mysql/</guid>
+      <guid>https://kurimi1.github.io/post/mysql/</guid>
       <description>&lt;h2 id=&#34;好的总结&#34;&gt;好的总结&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/guorui_java/article/details/118558095&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://blog.csdn.net/guorui_java/article/details/118558095&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;mysql修改密码&#34;&gt;mysql修改密码&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;ALTER USER &amp;lsquo;root&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; IDENTIFIED WITH mysql_native_password BY &amp;lsquo;在这里输入你的密码&amp;rsquo;;&lt;/p&gt;
+&lt;p&gt;ALTER USER &amp;lsquo;root&amp;rsquo;@&amp;rsquo;localhost&amp;rsquo; IDENTIFIED WITH mysql_native_password BY &amp;lsquo;在这里输入你的密码&amp;rsquo;;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;mysql-创建用户及授权&#34;&gt;mysql 创建用户及授权&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;create user &amp;lsquo;test&amp;rsquo;@&#39;%&#39; identified with mysql_native_password BY &amp;lsquo;密码&amp;rsquo;;
-grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; with grant option;&lt;/p&gt;
+&lt;p&gt;create user &amp;rsquo;test&amp;rsquo;@&amp;rsquo;%&amp;rsquo; identified with mysql_native_password BY &amp;lsquo;密码&amp;rsquo;;
+grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;rsquo;test1&amp;rsquo;@&amp;rsquo;localhost&amp;rsquo; with grant option;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;更新权限&lt;/p&gt;
 &lt;blockquote&gt;

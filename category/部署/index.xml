@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>部署 | Donald Blog</title>
-    <link>/category/%E9%83%A8%E7%BD%B2/</link>
-      <atom:link href="/category/%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/category/%E9%83%A8%E7%BD%B2/</link>
+      <atom:link href="https://kurimi1.github.io/category/%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
     <description>部署</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 07 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>部署</title>
-      <link>/category/%E9%83%A8%E7%BD%B2/</link>
+      <link>https://kurimi1.github.io/category/%E9%83%A8%E7%BD%B2/</link>
     </image>
     
     <item>
       <title>关于使用https的坑</title>
-      <link>/post/https-verify/</link>
+      <link>https://kurimi1.github.io/post/https-verify/</link>
       <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/https-verify/</guid>
+      <guid>https://kurimi1.github.io/post/https-verify/</guid>
       <description>&lt;h2 id=&#34;x509-cannot-validate-certificate-for-xxxx-because-it-doesnt-contain-any-ip-sans-解决方法&#34;&gt;x509: cannot validate certificate for x.x.x.x because it doesn&amp;rsquo;t contain any IP SANs 解决方法&lt;/h2&gt;
 &lt;p&gt;这种问题通常出现在ip使用https时(k8s自动生成证书)。因为k8s生成的证书的Subject Alternative Name都是DNS解析的，所以使用nodeport发布服务时node的ip地址不在验证域中，解决方法有两种&lt;/p&gt;
 &lt;h3 id=&#34;1客户端取消证书验证&#34;&gt;1：客户端取消证书验证&lt;/h3&gt;

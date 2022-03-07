@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>区块链 | Donald Blog</title>
-    <link>/tag/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
-      <atom:link href="/tag/%E5%8C%BA%E5%9D%97%E9%93%BE/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/tag/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
+      <atom:link href="https://kurimi1.github.io/tag/%E5%8C%BA%E5%9D%97%E9%93%BE/index.xml" rel="self" type="application/rss+xml" />
     <description>区块链</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 28 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>区块链</title>
-      <link>/tag/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
+      <link>https://kurimi1.github.io/tag/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
     </image>
     
     <item>
       <title>基于区块链的匿名通信系统</title>
-      <link>/post/im-blockchain/</link>
+      <link>https://kurimi1.github.io/post/im-blockchain/</link>
       <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/im-blockchain/</guid>
+      <guid>https://kurimi1.github.io/post/im-blockchain/</guid>
       <description>&lt;p&gt;对于上面所说的中间人攻击，我觉得可以用区块链解决，所有人公开公钥且公钥不和用户绑定。发消息时用公钥加密广播，仅持有此公钥的私钥的人才能看到所发消息。但存在一个消息泛滥问题，所有人都可以发消息给这个公钥，然而数字货币不会存在（因为没人会随便给你转账），这个问题可以用发消息+数字货币的方式解决。&lt;/p&gt;
 </description>
     </item>

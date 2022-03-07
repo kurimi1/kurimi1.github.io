@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>note | Donald Blog</title>
-    <link>/tag/note/</link>
-      <atom:link href="/tag/note/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/tag/note/</link>
+      <atom:link href="https://kurimi1.github.io/tag/note/index.xml" rel="self" type="application/rss+xml" />
     <description>note</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>note</title>
-      <link>/tag/note/</link>
+      <link>https://kurimi1.github.io/tag/note/</link>
     </image>
     
     <item>
       <title>golang的一些笔记</title>
-      <link>/post/go-base/</link>
+      <link>https://kurimi1.github.io/post/go-base/</link>
       <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-base/</guid>
+      <guid>https://kurimi1.github.io/post/go-base/</guid>
       <description>&lt;h2 id=&#34;多态的方法&#34;&gt;多态的方法&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;常用的interface接口&lt;/li&gt;
@@ -27,9 +27,9 @@
     
     <item>
       <title>使用Telepresence本地开发调试k8s微服务</title>
-      <link>/post/telepresence/</link>
+      <link>https://kurimi1.github.io/post/telepresence/</link>
       <pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/telepresence/</guid>
+      <guid>https://kurimi1.github.io/post/telepresence/</guid>
       <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
 &lt;p&gt;借助Telepresence实现以下：&lt;/p&gt;
 &lt;ul&gt;
@@ -60,9 +60,9 @@ vim config
     
     <item>
       <title>es note</title>
-      <link>/post/es/</link>
+      <link>https://kurimi1.github.io/post/es/</link>
       <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/es/</guid>
+      <guid>https://kurimi1.github.io/post/es/</guid>
       <description>&lt;h2 id=&#34;es7中-golang客户端聚合查询&#34;&gt;es7中 golang客户端聚合查询&lt;/h2&gt;
 &lt;p&gt;es7 中term无法使用多字段因此使用bool聚合查询
 must下匹配，filter进行过滤，range定义范围&lt;/p&gt;
@@ -92,9 +92,9 @@ xpack.security.authc.reserved_realm.enabled: false&lt;/p&gt;
     
     <item>
       <title>redis note</title>
-      <link>/post/redis/</link>
+      <link>https://kurimi1.github.io/post/redis/</link>
       <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/redis/</guid>
+      <guid>https://kurimi1.github.io/post/redis/</guid>
       <description>&lt;h2 id=&#34;获取所有key&#34;&gt;获取所有key&lt;/h2&gt;
 &lt;p&gt;keys *&lt;/p&gt;
 &lt;h2 id=&#34;docker-安装redis&#34;&gt;docker 安装redis&lt;/h2&gt;
@@ -109,9 +109,9 @@ docker run &amp;ndash;name some-redis -d -p 6379:6379 redis redis-server &amp;nd
     
     <item>
       <title>go test</title>
-      <link>/post/go-test/</link>
+      <link>https://kurimi1.github.io/post/go-test/</link>
       <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-test/</guid>
+      <guid>https://kurimi1.github.io/post/go-test/</guid>
       <description>&lt;h2 id=&#34;指定测试函数&#34;&gt;指定测试函数&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;go test -v -test.run xxxx&lt;/p&gt;
@@ -121,9 +121,9 @@ docker run &amp;ndash;name some-redis -d -p 6379:6379 redis redis-server &amp;nd
     
     <item>
       <title>go-zero note</title>
-      <link>/post/go-zero/</link>
+      <link>https://kurimi1.github.io/post/go-zero/</link>
       <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-zero/</guid>
+      <guid>https://kurimi1.github.io/post/go-zero/</guid>
       <description>&lt;h2 id=&#34;config使用环境变量&#34;&gt;config使用环境变量&lt;/h2&gt;
 &lt;p&gt;添加option&lt;/p&gt;
 &lt;blockquote&gt;
@@ -136,9 +136,9 @@ docker run &amp;ndash;name some-redis -d -p 6379:6379 redis redis-server &amp;nd
     
     <item>
       <title>protobuf note</title>
-      <link>/post/protobuf/</link>
+      <link>https://kurimi1.github.io/post/protobuf/</link>
       <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/protobuf/</guid>
+      <guid>https://kurimi1.github.io/post/protobuf/</guid>
       <description>&lt;h2 id=&#34;proto3定义数组类型&#34;&gt;proto3定义数组类型&lt;/h2&gt;
 &lt;p&gt;repeated允许字段重复，对于Go语言来说，它会编译成数组(slice of type)类型的格式。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -165,19 +165,19 @@ repeated foo results = 1;
     
     <item>
       <title>mysql</title>
-      <link>/post/mysql/</link>
+      <link>https://kurimi1.github.io/post/mysql/</link>
       <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/mysql/</guid>
+      <guid>https://kurimi1.github.io/post/mysql/</guid>
       <description>&lt;h2 id=&#34;好的总结&#34;&gt;好的总结&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/guorui_java/article/details/118558095&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://blog.csdn.net/guorui_java/article/details/118558095&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;mysql修改密码&#34;&gt;mysql修改密码&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;ALTER USER &amp;lsquo;root&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; IDENTIFIED WITH mysql_native_password BY &amp;lsquo;在这里输入你的密码&amp;rsquo;;&lt;/p&gt;
+&lt;p&gt;ALTER USER &amp;lsquo;root&amp;rsquo;@&amp;rsquo;localhost&amp;rsquo; IDENTIFIED WITH mysql_native_password BY &amp;lsquo;在这里输入你的密码&amp;rsquo;;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;mysql-创建用户及授权&#34;&gt;mysql 创建用户及授权&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;create user &amp;lsquo;test&amp;rsquo;@&#39;%&#39; identified with mysql_native_password BY &amp;lsquo;密码&amp;rsquo;;
-grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;lsquo;test1&amp;rsquo;@&amp;lsquo;localhost&amp;rsquo; with grant option;&lt;/p&gt;
+&lt;p&gt;create user &amp;rsquo;test&amp;rsquo;@&amp;rsquo;%&amp;rsquo; identified with mysql_native_password BY &amp;lsquo;密码&amp;rsquo;;
+grant all privileges on &lt;em&gt;.&lt;/em&gt; to &amp;rsquo;test1&amp;rsquo;@&amp;rsquo;localhost&amp;rsquo; with grant option;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;更新权限&lt;/p&gt;
 &lt;blockquote&gt;

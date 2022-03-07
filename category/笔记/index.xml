@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>笔记 | Donald Blog</title>
-    <link>/category/%E7%AC%94%E8%AE%B0/</link>
-      <atom:link href="/category/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/category/%E7%AC%94%E8%AE%B0/</link>
+      <atom:link href="https://kurimi1.github.io/category/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <description>笔记</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>笔记</title>
-      <link>/category/%E7%AC%94%E8%AE%B0/</link>
+      <link>https://kurimi1.github.io/category/%E7%AC%94%E8%AE%B0/</link>
     </image>
     
     <item>
       <title>es note</title>
-      <link>/post/es/</link>
+      <link>https://kurimi1.github.io/post/es/</link>
       <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/es/</guid>
+      <guid>https://kurimi1.github.io/post/es/</guid>
       <description>&lt;h2 id=&#34;es7中-golang客户端聚合查询&#34;&gt;es7中 golang客户端聚合查询&lt;/h2&gt;
 &lt;p&gt;es7 中term无法使用多字段因此使用bool聚合查询
 must下匹配，filter进行过滤，range定义范围&lt;/p&gt;
@@ -45,24 +45,10 @@ xpack.security.authc.reserved_realm.enabled: false&lt;/p&gt;
     </item>
     
     <item>
-      <title>hugo note</title>
-      <link>/post/hugo/</link>
-      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/hugo/</guid>
-      <description>&lt;h2 id=&#34;本地预览命令&#34;&gt;本地预览命令&lt;/h2&gt;
-&lt;p&gt;hugo server &amp;ndash;bind 0.0.0.0 -D&lt;/p&gt;
-&lt;h2 id=&#34;编译命令&#34;&gt;编译命令&lt;/h2&gt;
-&lt;p&gt;hugo -D&lt;/p&gt;
-&lt;h2 id=&#34;发布&#34;&gt;发布&lt;/h2&gt;
-&lt;p&gt;push 到 github&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>关于使用https的坑</title>
-      <link>/post/https-verify/</link>
+      <link>https://kurimi1.github.io/post/https-verify/</link>
       <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/https-verify/</guid>
+      <guid>https://kurimi1.github.io/post/https-verify/</guid>
       <description>&lt;h2 id=&#34;x509-cannot-validate-certificate-for-xxxx-because-it-doesnt-contain-any-ip-sans-解决方法&#34;&gt;x509: cannot validate certificate for x.x.x.x because it doesn&amp;rsquo;t contain any IP SANs 解决方法&lt;/h2&gt;
 &lt;p&gt;这种问题通常出现在ip使用https时(k8s自动生成证书)。因为k8s生成的证书的Subject Alternative Name都是DNS解析的，所以使用nodeport发布服务时node的ip地址不在验证域中，解决方法有两种&lt;/p&gt;
 &lt;h3 id=&#34;1客户端取消证书验证&#34;&gt;1：客户端取消证书验证&lt;/h3&gt;
@@ -99,9 +85,9 @@ DNS.1 = localhost&lt;/p&gt;
     
     <item>
       <title>go-zero note</title>
-      <link>/post/go-zero/</link>
+      <link>https://kurimi1.github.io/post/go-zero/</link>
       <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-zero/</guid>
+      <guid>https://kurimi1.github.io/post/go-zero/</guid>
       <description>&lt;h2 id=&#34;config使用环境变量&#34;&gt;config使用环境变量&lt;/h2&gt;
 &lt;p&gt;添加option&lt;/p&gt;
 &lt;blockquote&gt;
@@ -114,9 +100,9 @@ DNS.1 = localhost&lt;/p&gt;
     
     <item>
       <title>protobuf note</title>
-      <link>/post/protobuf/</link>
+      <link>https://kurimi1.github.io/post/protobuf/</link>
       <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/protobuf/</guid>
+      <guid>https://kurimi1.github.io/post/protobuf/</guid>
       <description>&lt;h2 id=&#34;proto3定义数组类型&#34;&gt;proto3定义数组类型&lt;/h2&gt;
 &lt;p&gt;repeated允许字段重复，对于Go语言来说，它会编译成数组(slice of type)类型的格式。&lt;/p&gt;
 &lt;blockquote&gt;

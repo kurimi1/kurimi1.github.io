@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>notes | Donald Blog</title>
+    <link>https://kurimi1.github.io/category/notes/</link>
+      <atom:link href="https://kurimi1.github.io/category/notes/index.xml" rel="self" type="application/rss+xml" />
+    <description>notes</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 07 Mar 2022 11:29:57 +0800</lastBuildDate>
+    <image>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>notes</title>
+      <link>https://kurimi1.github.io/category/notes/</link>
+    </image>
+    
+    <item>
+      <title>Hugo Notes</title>
+      <link>https://kurimi1.github.io/post/hugo/</link>
+      <pubDate>Mon, 07 Mar 2022 11:29:57 +0800</pubDate>
+      <guid>https://kurimi1.github.io/post/hugo/</guid>
+      <description>&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
+&lt;p&gt;有些主题可能不支持，一定要下载extended版本。&lt;/p&gt;
+&lt;h2 id=&#34;本地预览命令&#34;&gt;本地预览命令&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;hugo server &amp;ndash;bind 0.0.0.0 -D&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;-D 代表编译草稿&lt;/p&gt;
+&lt;h2 id=&#34;创建post&#34;&gt;创建post&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;hugo new &amp;ndash;kind post post/my-article-name&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;编译命令&#34;&gt;编译命令&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;hugo -D&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;发布&#34;&gt;发布&lt;/h2&gt;
+&lt;p&gt;push 到 github&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git add .
+git commit -m &amp;quot;update&amp;quot;
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Docker Link Localnet</title>
+      <link>https://kurimi1.github.io/post/docker-link-localnet/</link>
+      <pubDate>Fri, 04 Mar 2022 18:21:45 +0800</pubDate>
+      <guid>https://kurimi1.github.io/post/docker-link-localnet/</guid>
+      <description>&lt;h2 id=&#34;设置net为host&#34;&gt;设置net为host&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker run &amp;ndash;net host&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可直接访问&lt;/p&gt;
+&lt;h2 id=&#34;使用默认的bridge&#34;&gt;使用默认的bridge&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker network inspect bridge&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看网关，通过网关访问本地网络&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

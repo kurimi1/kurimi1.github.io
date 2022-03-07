@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>项目 | Donald Blog</title>
-    <link>/category/%E9%A1%B9%E7%9B%AE/</link>
-      <atom:link href="/category/%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/category/%E9%A1%B9%E7%9B%AE/</link>
+      <atom:link href="https://kurimi1.github.io/category/%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" />
     <description>项目</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>项目</title>
-      <link>/category/%E9%A1%B9%E7%9B%AE/</link>
+      <link>https://kurimi1.github.io/category/%E9%A1%B9%E7%9B%AE/</link>
     </image>
     
     <item>
       <title>个人博客搜索引擎</title>
-      <link>/post/blog-search/</link>
+      <link>https://kurimi1.github.io/post/blog-search/</link>
       <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>/post/blog-search/</guid>
+      <guid>https://kurimi1.github.io/post/blog-search/</guid>
       <description>&lt;h2 id=&#34;1期需求整理&#34;&gt;1期需求整理&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;全文搜索&lt;/li&gt;
@@ -33,9 +33,9 @@
     
     <item>
       <title>基于区块链的匿名通信系统</title>
-      <link>/post/im-blockchain/</link>
+      <link>https://kurimi1.github.io/post/im-blockchain/</link>
       <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/im-blockchain/</guid>
+      <guid>https://kurimi1.github.io/post/im-blockchain/</guid>
       <description>&lt;p&gt;对于上面所说的中间人攻击，我觉得可以用区块链解决，所有人公开公钥且公钥不和用户绑定。发消息时用公钥加密广播，仅持有此公钥的私钥的人才能看到所发消息。但存在一个消息泛滥问题，所有人都可以发消息给这个公钥，然而数字货币不会存在（因为没人会随便给你转账），这个问题可以用发消息+数字货币的方式解决。&lt;/p&gt;
 </description>
     </item>

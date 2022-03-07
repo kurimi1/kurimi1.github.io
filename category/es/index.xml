@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>es | Donald Blog</title>
-    <link>/category/es/</link>
-      <atom:link href="/category/es/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/category/es/</link>
+      <atom:link href="https://kurimi1.github.io/category/es/index.xml" rel="self" type="application/rss+xml" />
     <description>es</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>es</title>
-      <link>/category/es/</link>
+      <link>https://kurimi1.github.io/category/es/</link>
     </image>
     
     <item>
       <title>es note</title>
-      <link>/post/es/</link>
+      <link>https://kurimi1.github.io/post/es/</link>
       <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/es/</guid>
+      <guid>https://kurimi1.github.io/post/es/</guid>
       <description>&lt;h2 id=&#34;es7中-golang客户端聚合查询&#34;&gt;es7中 golang客户端聚合查询&lt;/h2&gt;
 &lt;p&gt;es7 中term无法使用多字段因此使用bool聚合查询
 must下匹配，filter进行过滤，range定义范围&lt;/p&gt;

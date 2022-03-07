@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>教程 | Donald Blog</title>
-    <link>/tag/%E6%95%99%E7%A8%8B/</link>
-      <atom:link href="/tag/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/tag/%E6%95%99%E7%A8%8B/</link>
+      <atom:link href="https://kurimi1.github.io/tag/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <description>教程</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 03 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>教程</title>
-      <link>/tag/%E6%95%99%E7%A8%8B/</link>
+      <link>https://kurimi1.github.io/tag/%E6%95%99%E7%A8%8B/</link>
     </image>
     
     <item>
       <title>goalng使用gitlab私有库</title>
-      <link>/post/golang-use-private-libraries/</link>
+      <link>https://kurimi1.github.io/post/golang-use-private-libraries/</link>
       <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>/post/golang-use-private-libraries/</guid>
+      <guid>https://kurimi1.github.io/post/golang-use-private-libraries/</guid>
       <description>&lt;h2 id=&#34;设置私有库&#34;&gt;设置私有库&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;go env -w GOPRIVATE=&amp;ldquo;gitlab.com&amp;rdquo;&lt;/p&gt;

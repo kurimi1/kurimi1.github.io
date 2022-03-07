@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cloud | Donald Blog</title>
-    <link>/tag/cloud/</link>
-      <atom:link href="/tag/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/tag/cloud/</link>
+      <atom:link href="https://kurimi1.github.io/tag/cloud/index.xml" rel="self" type="application/rss+xml" />
     <description>cloud</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 08 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>cloud</title>
-      <link>/tag/cloud/</link>
+      <link>https://kurimi1.github.io/tag/cloud/</link>
     </image>
     
     <item>
       <title>在k8s中部署的系统获取用户ip</title>
-      <link>/post/k8s-get-userip/</link>
+      <link>https://kurimi1.github.io/post/k8s-get-userip/</link>
       <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>/post/k8s-get-userip/</guid>
+      <guid>https://kurimi1.github.io/post/k8s-get-userip/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;k8s Cluster模式 访问任何节点ip自带路由跳转(反向代理？)，因此后端获取到的是转换过一次的ip，而不是用户真实ip&lt;/p&gt;
 &lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
@@ -26,9 +26,9 @@
     
     <item>
       <title>rook-ceph 踩坑</title>
-      <link>/post/rook-ceph/</link>
+      <link>https://kurimi1.github.io/post/rook-ceph/</link>
       <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>/post/rook-ceph/</guid>
+      <guid>https://kurimi1.github.io/post/rook-ceph/</guid>
       <description>&lt;h2 id=&#34;k8s-安装rook-ceph&#34;&gt;k8s 安装rook-ceph&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://rook.io/docs/rook/v1.7/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://rook.io/docs/rook/v1.7/&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;添加新磁盘&#34;&gt;添加新磁盘&lt;/h2&gt;
@@ -92,9 +92,9 @@ Terminating，把finalizers的值删掉，保存&lt;/p&gt;
     
     <item>
       <title>云原生总结</title>
-      <link>/post/cloud/</link>
+      <link>https://kurimi1.github.io/post/cloud/</link>
       <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/cloud/</guid>
+      <guid>https://kurimi1.github.io/post/cloud/</guid>
       <description>&lt;h2 id=&#34;云原生-主流组件&#34;&gt;云原生-主流组件&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Prometheus&lt;/li&gt;

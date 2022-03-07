@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>note | Donald Blog</title>
-    <link>/category/note/</link>
-      <atom:link href="/category/note/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/category/note/</link>
+      <atom:link href="https://kurimi1.github.io/category/note/index.xml" rel="self" type="application/rss+xml" />
     <description>note</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>note</title>
-      <link>/category/note/</link>
+      <link>https://kurimi1.github.io/category/note/</link>
     </image>
     
     <item>
       <title>golang的一些笔记</title>
-      <link>/post/go-base/</link>
+      <link>https://kurimi1.github.io/post/go-base/</link>
       <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-base/</guid>
+      <guid>https://kurimi1.github.io/post/go-base/</guid>
       <description>&lt;h2 id=&#34;多态的方法&#34;&gt;多态的方法&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;常用的interface接口&lt;/li&gt;
@@ -27,9 +27,9 @@
     
     <item>
       <title>redis note</title>
-      <link>/post/redis/</link>
+      <link>https://kurimi1.github.io/post/redis/</link>
       <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/redis/</guid>
+      <guid>https://kurimi1.github.io/post/redis/</guid>
       <description>&lt;h2 id=&#34;获取所有key&#34;&gt;获取所有key&lt;/h2&gt;
 &lt;p&gt;keys *&lt;/p&gt;
 &lt;h2 id=&#34;docker-安装redis&#34;&gt;docker 安装redis&lt;/h2&gt;
@@ -44,9 +44,9 @@ docker run &amp;ndash;name some-redis -d -p 6379:6379 redis redis-server &amp;nd
     
     <item>
       <title>go test</title>
-      <link>/post/go-test/</link>
+      <link>https://kurimi1.github.io/post/go-test/</link>
       <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-test/</guid>
+      <guid>https://kurimi1.github.io/post/go-test/</guid>
       <description>&lt;h2 id=&#34;指定测试函数&#34;&gt;指定测试函数&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;go test -v -test.run xxxx&lt;/p&gt;

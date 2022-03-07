@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>redis | Donald Blog</title>
-    <link>/category/redis/</link>
-      <atom:link href="/category/redis/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/category/redis/</link>
+      <atom:link href="https://kurimi1.github.io/category/redis/index.xml" rel="self" type="application/rss+xml" />
     <description>redis</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>redis</title>
-      <link>/category/redis/</link>
+      <link>https://kurimi1.github.io/category/redis/</link>
     </image>
     
     <item>
       <title>redis note</title>
-      <link>/post/redis/</link>
+      <link>https://kurimi1.github.io/post/redis/</link>
       <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/redis/</guid>
+      <guid>https://kurimi1.github.io/post/redis/</guid>
       <description>&lt;h2 id=&#34;获取所有key&#34;&gt;获取所有key&lt;/h2&gt;
 &lt;p&gt;keys *&lt;/p&gt;
 &lt;h2 id=&#34;docker-安装redis&#34;&gt;docker 安装redis&lt;/h2&gt;

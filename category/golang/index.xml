@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>golang | Donald Blog</title>
-    <link>/category/golang/</link>
-      <atom:link href="/category/golang/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/category/golang/</link>
+      <atom:link href="https://kurimi1.github.io/category/golang/index.xml" rel="self" type="application/rss+xml" />
     <description>golang</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>golang</title>
-      <link>/category/golang/</link>
+      <link>https://kurimi1.github.io/category/golang/</link>
     </image>
     
     <item>
       <title>个人博客搜索引擎</title>
-      <link>/post/blog-search/</link>
+      <link>https://kurimi1.github.io/post/blog-search/</link>
       <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>/post/blog-search/</guid>
+      <guid>https://kurimi1.github.io/post/blog-search/</guid>
       <description>&lt;h2 id=&#34;1期需求整理&#34;&gt;1期需求整理&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;全文搜索&lt;/li&gt;
@@ -33,9 +33,9 @@
     
     <item>
       <title>解决在vscode中go mod 不在当前目录下的问题</title>
-      <link>/post/set-vscode-gopls/</link>
+      <link>https://kurimi1.github.io/post/set-vscode-gopls/</link>
       <pubDate>Thu, 19 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>/post/set-vscode-gopls/</guid>
+      <guid>https://kurimi1.github.io/post/set-vscode-gopls/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
 &lt;p&gt;gopls 在0.7版本之前不存在此问题，0.7之后，gopls 在go.mod 不在当前目录下的情况下，会报错，提示找不到 go.mod 文件。&lt;/p&gt;
 &lt;h2 id=&#34;gopls设置&#34;&gt;gopls设置&lt;/h2&gt;
@@ -47,7 +47,27 @@ experimentalWorkspaceModule opts a user into the experimental support for multi-
 &lt;p&gt;Default: false.&lt;/p&gt;
 &lt;h2 id=&#34;vscode-中设置&#34;&gt;vscode 中设置&lt;/h2&gt;
 &lt;p&gt;在插件设置最底下
-&lt;img src=&#34;./gopls.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./gopls.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
     &amp;quot;gopls&amp;quot;: {
         &amp;quot;experimentalWorkspaceModule&amp;quot;: true
@@ -60,9 +80,9 @@ experimentalWorkspaceModule opts a user into the experimental support for multi-
     
     <item>
       <title>goalng使用gitlab私有库</title>
-      <link>/post/golang-use-private-libraries/</link>
+      <link>https://kurimi1.github.io/post/golang-use-private-libraries/</link>
       <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>/post/golang-use-private-libraries/</guid>
+      <guid>https://kurimi1.github.io/post/golang-use-private-libraries/</guid>
       <description>&lt;h2 id=&#34;设置私有库&#34;&gt;设置私有库&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;go env -w GOPRIVATE=&amp;ldquo;gitlab.com&amp;rdquo;&lt;/p&gt;
@@ -80,18 +100,18 @@ experimentalWorkspaceModule opts a user into the experimental support for multi-
     
     <item>
       <title>基于区块链的匿名通信系统</title>
-      <link>/post/im-blockchain/</link>
+      <link>https://kurimi1.github.io/post/im-blockchain/</link>
       <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/im-blockchain/</guid>
+      <guid>https://kurimi1.github.io/post/im-blockchain/</guid>
       <description>&lt;p&gt;对于上面所说的中间人攻击，我觉得可以用区块链解决，所有人公开公钥且公钥不和用户绑定。发消息时用公钥加密广播，仅持有此公钥的私钥的人才能看到所发消息。但存在一个消息泛滥问题，所有人都可以发消息给这个公钥，然而数字货币不会存在（因为没人会随便给你转账），这个问题可以用发消息+数字货币的方式解决。&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>golang的一些笔记</title>
-      <link>/post/go-base/</link>
+      <link>https://kurimi1.github.io/post/go-base/</link>
       <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-base/</guid>
+      <guid>https://kurimi1.github.io/post/go-base/</guid>
       <description>&lt;h2 id=&#34;多态的方法&#34;&gt;多态的方法&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;常用的interface接口&lt;/li&gt;
@@ -102,9 +122,9 @@ experimentalWorkspaceModule opts a user into the experimental support for multi-
     
     <item>
       <title>es note</title>
-      <link>/post/es/</link>
+      <link>https://kurimi1.github.io/post/es/</link>
       <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/es/</guid>
+      <guid>https://kurimi1.github.io/post/es/</guid>
       <description>&lt;h2 id=&#34;es7中-golang客户端聚合查询&#34;&gt;es7中 golang客户端聚合查询&lt;/h2&gt;
 &lt;p&gt;es7 中term无法使用多字段因此使用bool聚合查询
 must下匹配，filter进行过滤，range定义范围&lt;/p&gt;
@@ -134,9 +154,9 @@ xpack.security.authc.reserved_realm.enabled: false&lt;/p&gt;
     
     <item>
       <title>go test</title>
-      <link>/post/go-test/</link>
+      <link>https://kurimi1.github.io/post/go-test/</link>
       <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-test/</guid>
+      <guid>https://kurimi1.github.io/post/go-test/</guid>
       <description>&lt;h2 id=&#34;指定测试函数&#34;&gt;指定测试函数&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;go test -v -test.run xxxx&lt;/p&gt;
@@ -146,9 +166,9 @@ xpack.security.authc.reserved_realm.enabled: false&lt;/p&gt;
     
     <item>
       <title>go-zero note</title>
-      <link>/post/go-zero/</link>
+      <link>https://kurimi1.github.io/post/go-zero/</link>
       <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-zero/</guid>
+      <guid>https://kurimi1.github.io/post/go-zero/</guid>
       <description>&lt;h2 id=&#34;config使用环境变量&#34;&gt;config使用环境变量&lt;/h2&gt;
 &lt;p&gt;添加option&lt;/p&gt;
 &lt;blockquote&gt;

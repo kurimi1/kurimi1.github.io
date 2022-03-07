@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>proto | Donald Blog</title>
-    <link>/tag/proto/</link>
-      <atom:link href="/tag/proto/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/tag/proto/</link>
+      <atom:link href="https://kurimi1.github.io/tag/proto/index.xml" rel="self" type="application/rss+xml" />
     <description>proto</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 22 Jun 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>proto</title>
-      <link>/tag/proto/</link>
+      <link>https://kurimi1.github.io/tag/proto/</link>
     </image>
     
     <item>
       <title>protobuf note</title>
-      <link>/post/protobuf/</link>
+      <link>https://kurimi1.github.io/post/protobuf/</link>
       <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/protobuf/</guid>
+      <guid>https://kurimi1.github.io/post/protobuf/</guid>
       <description>&lt;h2 id=&#34;proto3定义数组类型&#34;&gt;proto3定义数组类型&lt;/h2&gt;
 &lt;p&gt;repeated允许字段重复，对于Go语言来说，它会编译成数组(slice of type)类型的格式。&lt;/p&gt;
 &lt;blockquote&gt;

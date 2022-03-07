@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pitfall | Donald Blog</title>
-    <link>/tag/pitfall/</link>
-      <atom:link href="/tag/pitfall/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/tag/pitfall/</link>
+      <atom:link href="https://kurimi1.github.io/tag/pitfall/index.xml" rel="self" type="application/rss+xml" />
     <description>pitfall</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>pitfall</title>
-      <link>/tag/pitfall/</link>
+      <link>https://kurimi1.github.io/tag/pitfall/</link>
     </image>
     
     <item>
       <title>golang的一些笔记</title>
-      <link>/post/go-base/</link>
+      <link>https://kurimi1.github.io/post/go-base/</link>
       <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/go-base/</guid>
+      <guid>https://kurimi1.github.io/post/go-base/</guid>
       <description>&lt;h2 id=&#34;多态的方法&#34;&gt;多态的方法&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;常用的interface接口&lt;/li&gt;
@@ -27,9 +27,9 @@
     
     <item>
       <title>使用Telepresence本地开发调试k8s微服务</title>
-      <link>/post/telepresence/</link>
+      <link>https://kurimi1.github.io/post/telepresence/</link>
       <pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>/post/telepresence/</guid>
+      <guid>https://kurimi1.github.io/post/telepresence/</guid>
       <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
 &lt;p&gt;借助Telepresence实现以下：&lt;/p&gt;
 &lt;ul&gt;

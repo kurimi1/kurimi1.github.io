@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>proto | Donald Blog</title>
-    <link>/category/proto/</link>
-      <atom:link href="/category/proto/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kurimi1.github.io/category/proto/</link>
+      <atom:link href="https://kurimi1.github.io/category/proto/index.xml" rel="self" type="application/rss+xml" />
     <description>proto</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 21 Jun 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>proto</title>
-      <link>/category/proto/</link>
+      <link>https://kurimi1.github.io/category/proto/</link>
     </image>
     
     <item>
       <title>vscode设置proto插件</title>
-      <link>/post/set-vscode-proto-plugin/</link>
+      <link>https://kurimi1.github.io/post/set-vscode-proto-plugin/</link>
       <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>/post/set-vscode-proto-plugin/</guid>
+      <guid>https://kurimi1.github.io/post/set-vscode-proto-plugin/</guid>
       <description>&lt;h2 id=&#34;安装插件&#34;&gt;安装插件&lt;/h2&gt;
 &lt;p&gt;搜索安装这两个插件，第一个插件会调用第二个插件进行格式化&lt;/p&gt;
 &lt;ul&gt;
