@@ -5,12 +5,47 @@
     <link>https://kurimi1.github.io/category/%E6%95%99%E7%A8%8B/</link>
       <atom:link href="https://kurimi1.github.io/category/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <description>教程</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 14 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 09 Mar 2022 11:17:59 +0800</lastBuildDate>
     <image>
       <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>教程</title>
       <link>https://kurimi1.github.io/category/%E6%95%99%E7%A8%8B/</link>
     </image>
+    
+    <item>
+      <title>Use Go Swagger Gen Code</title>
+      <link>https://kurimi1.github.io/post/use-go-swagger-gen-code/</link>
+      <pubDate>Wed, 09 Mar 2022 11:17:59 +0800</pubDate>
+      <guid>https://kurimi1.github.io/post/use-go-swagger-gen-code/</guid>
+      <description>&lt;h2 id=&#34;项目开发流程&#34;&gt;项目开发流程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;需求&lt;/li&gt;
+&lt;li&gt;设计&lt;/li&gt;
+&lt;li&gt;接口设计-swagger&lt;/li&gt;
+&lt;li&gt;http代码生成&lt;/li&gt;
+&lt;li&gt;ent 数据库代码生成，go-zero 数据库代码生成-自带缓存，gorm 数据库代码生成&lt;/li&gt;
+&lt;li&gt;proto grpc代码生成&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;生成api代码的工具对比&#34;&gt;生成api代码的工具对比&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;go-zero生成的api代码，无法定义http code，不符合openapi规范&lt;/li&gt;
+&lt;li&gt;kratos 通过 proto 生成api代码，未实践&lt;/li&gt;
+&lt;li&gt;编写 swagger 文档，然后用 swagger-codegen 生成代码, 生成的是server stubs&lt;/li&gt;
+&lt;li&gt;使用 go-swagger生成代码，仅支持2.0，生成完整的服务器代码&lt;/li&gt;
+&lt;li&gt;使用 openapi-generator 生成代码， 生成的是server stubs，无法直接使用&lt;/li&gt;
+&lt;li&gt;使用api fox 工具生成，内部使用的是openapi-generator&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;openapi-的路径与操作&#34;&gt;openapi 的路径与操作&lt;/h2&gt;
+&lt;p&gt;文档：&lt;a href=&#34;https://swagger.io/docs/specification/describing-parameters/#query-parameters&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://swagger.io/docs/specification/describing-parameters/#query-parameters&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;查询数据库里的唯一字段id，name使用路径path
+/users/{id}&lt;/p&gt;
+&lt;p&gt;查询参数使用query，例如limit，offset等&lt;/p&gt;
+&lt;h3 id=&#34;openapi-generator&#34;&gt;openapi-generator&lt;/h3&gt;
+&lt;p&gt;使用apifox 生成，无法直接使用&lt;/p&gt;
+&lt;h3 id=&#34;go-swagger&#34;&gt;go-swagger&lt;/h3&gt;
+&lt;h3 id=&#34;kratos&#34;&gt;kratos&lt;/h3&gt;
+</description>
+    </item>
     
     <item>
       <title>解决k8s 国外镜像下载问题</title>

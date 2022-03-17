@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>es | Donald Blog</title>
-    <link>https://kurimi1.github.io/tag/es/</link>
-      <atom:link href="https://kurimi1.github.io/tag/es/index.xml" rel="self" type="application/rss+xml" />
-    <description>es</description>
+    <title>坑 | Donald Blog</title>
+    <link>https://kurimi1.github.io/category/%E5%9D%91/</link>
+      <atom:link href="https://kurimi1.github.io/category/%E5%9D%91/index.xml" rel="self" type="application/rss+xml" />
+    <description>坑</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 16 Mar 2022 17:12:32 +0800</lastBuildDate>
     <image>
       <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
-      <title>es</title>
-      <link>https://kurimi1.github.io/tag/es/</link>
+      <title>坑</title>
+      <link>https://kurimi1.github.io/category/%E5%9D%91/</link>
     </image>
     
     <item>
@@ -50,38 +50,6 @@ full&lt;/p&gt;
 &lt;p&gt;none&lt;/p&gt;
 &lt;p&gt;不 执行服务器证书的验证。此模式会禁用 SSL/TLS 的许多安全优势，并且只能在谨慎考虑后使用。它主要用作尝试解决 TLS 错误时的临时诊断机制；强烈建议不要在生产环境中使用它。&lt;/p&gt;
 &lt;p&gt;默认值为full。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>es note</title>
-      <link>https://kurimi1.github.io/post/es/</link>
-      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>https://kurimi1.github.io/post/es/</guid>
-      <description>&lt;h2 id=&#34;es7中-golang客户端聚合查询&#34;&gt;es7中 golang客户端聚合查询&lt;/h2&gt;
-&lt;p&gt;es7 中term无法使用多字段因此使用bool聚合查询
-must下匹配，filter进行过滤，range定义范围&lt;/p&gt;
-&lt;h2 id=&#34;查询方法&#34;&gt;查询方法&lt;/h2&gt;
-&lt;p&gt;term 精准
-match 模糊
-match_phrase 模糊但只保留那些包含全部搜索词项，且位置与搜索词项相同的文档&lt;/p&gt;
-&lt;h2 id=&#34;docker-部署的es无法探测&#34;&gt;docker 部署的ES无法探测&lt;/h2&gt;
-&lt;p&gt;解决方法：
-set false&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;client, err = elastic.NewClient(elastic.SetSniff(false), elastic.SetURL(es_addr))&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;eck-安装es取消安全选项&#34;&gt;eck 安装es，取消安全选项&lt;/h2&gt;
-&lt;h3 id=&#34;eck需要配置&#34;&gt;eck需要配置&lt;/h3&gt;
-&lt;p&gt;setDefaultSecurityContext: false&lt;/p&gt;
-&lt;h3 id=&#34;es-需要配置&#34;&gt;es 需要配置&lt;/h3&gt;
-&lt;p&gt;config:
-xpack.security.enabled: false
-xpack.security.http.ssl.enabled: false
-xpack.security.transport.ssl.enabled: false
-xpack.security.authc.reserved_realm.enabled: false&lt;/p&gt;
-&lt;h3 id=&#34;其他配置&#34;&gt;其他配置&lt;/h3&gt;
-&lt;p&gt;取消就绪检测等&lt;/p&gt;
 </description>
     </item>
     
