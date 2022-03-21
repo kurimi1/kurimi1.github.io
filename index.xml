@@ -5,12 +5,45 @@
     <link>https://kurimi1.github.io/</link>
       <atom:link href="https://kurimi1.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Donald Blog</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 16 Mar 2022 17:12:32 +0800</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 21 Mar 2022 11:45:41 +0800</lastBuildDate>
     <image>
       <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Donald Blog</title>
       <link>https://kurimi1.github.io/</link>
     </image>
+    
+    <item>
+      <title>Ubuntu18 Set Ulimit</title>
+      <link>https://kurimi1.github.io/post/ubuntu18-set-ulimit/</link>
+      <pubDate>Mon, 21 Mar 2022 11:45:41 +0800</pubDate>
+      <guid>https://kurimi1.github.io/post/ubuntu18-set-ulimit/</guid>
+      <description>&lt;h2 id=&#34;第一步修改limit配置文件&#34;&gt;第一步：修改limit配置文件&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim /etc/security/limits.conf
+
+# 添加
+# 打开文件数不能没限制
+* - nofile 65535 
+root - nofile 65535
+* - nproc 65535
+root - nproc 65535
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;*代表所有用户但不包括root，所有root要单独写出来&lt;br&gt;
+切换用户或者重新登录来应用配置&lt;br&gt;
+&lt;strong&gt;通常服务这样配置就可以了，ubuntu20.10可以，但18.04配置不能生效！！！&lt;/strong&gt;&lt;br&gt;
+猜测ubuntu LTS版本应该通过系统层面配置&lt;/p&gt;
+&lt;h2 id=&#34;第二步修改系统默认配置文件&#34;&gt;第二步：修改系统默认配置文件&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim /etc/systemd/system.conf 
+# 桌面模式或许也要修改user.conf
+vim /etc/systemd/user.conf
+# 修改
+DefaultLimitNOFILE=65535
+DefaultLimitNPROC=65535
+# 执行
+systemctl daemon-reload
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;切换用户或重新登录&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Filebeat Config on Insecure Https</title>
@@ -766,7 +799,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-823691475&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-347685291&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -776,7 +809,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-823691475&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-347685291&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
