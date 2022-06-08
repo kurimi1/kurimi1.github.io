@@ -30,7 +30,7 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;编译命令&#34;&gt;编译命令&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;hugo -D&lt;/p&gt;
+&lt;p&gt;hugo&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;发布&#34;&gt;发布&lt;/h2&gt;
 &lt;p&gt;push 到 github&lt;/p&gt;

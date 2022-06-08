@@ -5,12 +5,26 @@
     <link>https://kurimi1.github.io/category/go/</link>
       <atom:link href="https://kurimi1.github.io/category/go/index.xml" rel="self" type="application/rss+xml" />
     <description>go</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 03 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 24 Mar 2022 13:41:54 +0800</lastBuildDate>
     <image>
       <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>go</title>
       <link>https://kurimi1.github.io/category/go/</link>
     </image>
+    
+    <item>
+      <title>Model Code Gen Compare</title>
+      <link>https://kurimi1.github.io/post/model-code-gen-compare/</link>
+      <pubDate>Thu, 24 Mar 2022 13:41:54 +0800</pubDate>
+      <guid>https://kurimi1.github.io/post/model-code-gen-compare/</guid>
+      <description>&lt;h2 id=&#34;go-zero&#34;&gt;go-zero&lt;/h2&gt;
+&lt;h2 id=&#34;ent&#34;&gt;ent&lt;/h2&gt;
+&lt;h2 id=&#34;gorm&#34;&gt;gorm&lt;/h2&gt;
+&lt;h2 id=&#34;gorm2&#34;&gt;gorm2&lt;/h2&gt;
+&lt;h2 id=&#34;sqlc&#34;&gt;sqlc&lt;/h2&gt;
+&lt;h2 id=&#34;goframe&#34;&gt;goframe&lt;/h2&gt;
+</description>
+    </item>
     
     <item>
       <title>go控制协程并发数量</title>
