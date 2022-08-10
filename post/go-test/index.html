@@ -731,6 +731,21 @@
 <blockquote>
 <p>go test -v -test.run xxxx</p>
 </blockquote>
+<p>使用正则指定</p>
+<p>go test -run ^xxx&amp;</p>
+<h2 id="基准测试">基准测试</h2>
+<blockquote>
+<p>go test -benchmem -run=^&amp; -bench ^xxx$
+必须使用-run=^&amp;才能指定测试某个基准测试，否在单测基测都会执行</p>
+</blockquote>
+<h2 id="并发基准测试">并发基准测试</h2>
+<pre><code class="language-go">b.Setparallelism(2) // 设置并发数量2x核心数
+b.Runparallel(func(pb *testing.PB) {
+    for pb.Next() {
+        xx()
+    }
+})
+</code></pre>
 
     </div>
 
@@ -947,7 +962,7 @@
       
 
     
-    <script src="/js/vendor-bundle.min.7f632ea429b2189fa80232d9afedded1.js"></script>
+    <script src="/js/vendor-bundle.min.d26cbef546776b4d6032d1ea3dafadab.js"></script>
 
     
     
@@ -1041,7 +1056,7 @@
       
     
     
-    <script src="/zh/js/wowchemy.min.cf274f057955bc34ddb04df3563c29c0.js"></script>
+    <script src="/zh/js/wowchemy.min.fe991ccc6c43e040fb86c2b5e506703e.js"></script>
 
     
     

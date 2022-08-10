@@ -17,10 +17,23 @@
       <link>https://kurimi1.github.io/post/model-code-gen-compare/</link>
       <pubDate>Thu, 24 Mar 2022 13:41:54 +0800</pubDate>
       <guid>https://kurimi1.github.io/post/model-code-gen-compare/</guid>
-      <description>&lt;h2 id=&#34;go-zero&#34;&gt;go-zero&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;go-orm-集合&#34;&gt;go orm 集合&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/d-tsuji/awesome-go-orms&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/d-tsuji/awesome-go-orms&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;go-zero&#34;&gt;go-zero&lt;/h2&gt;
+&lt;p&gt;根据数据库或sql生成代码&lt;/p&gt;
+&lt;p&gt;对除mysql外不友好&lt;/p&gt;
+&lt;p&gt;有缓存代码&lt;/p&gt;
+&lt;p&gt;类sql模式&lt;/p&gt;
 &lt;h2 id=&#34;ent&#34;&gt;ent&lt;/h2&gt;
-&lt;h2 id=&#34;gorm&#34;&gt;gorm&lt;/h2&gt;
-&lt;h2 id=&#34;gorm2&#34;&gt;gorm2&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ent/ent&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/ent/ent&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;根据自定义的schame生成数据库和代码&lt;/p&gt;
+&lt;p&gt;文档好&lt;/p&gt;
+&lt;p&gt;有第三方缓存&lt;a href=&#34;https://github.com/ariga/entcache&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/ariga/entcache&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;go-gormgen&#34;&gt;go-gorm/gen&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/go-gorm/gen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/go-gorm/gen/&lt;/a&gt; 字节无恒实验室&lt;/p&gt;
+&lt;p&gt;根据数据库生成代码&lt;/p&gt;
+&lt;p&gt;文档太烂&lt;/p&gt;
+&lt;p&gt;没缓存&lt;/p&gt;
 &lt;h2 id=&#34;sqlc&#34;&gt;sqlc&lt;/h2&gt;
 &lt;h2 id=&#34;goframe&#34;&gt;goframe&lt;/h2&gt;
 </description>

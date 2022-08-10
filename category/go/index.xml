@@ -5,7 +5,7 @@
     <link>https://kurimi1.github.io/category/go/</link>
       <atom:link href="https://kurimi1.github.io/category/go/index.xml" rel="self" type="application/rss+xml" />
     <description>go</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 24 Mar 2022 13:41:54 +0800</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Thu, 21 Jul 2022 02:30:58 +0000</lastBuildDate>
     <image>
       <url>https://kurimi1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>go</title>
@@ -13,14 +13,92 @@
     </image>
     
     <item>
+      <title>Go Pprof Note</title>
+      <link>https://kurimi1.github.io/post/go-pprof/</link>
+      <pubDate>Thu, 21 Jul 2022 02:30:58 +0000</pubDate>
+      <guid>https://kurimi1.github.io/post/go-pprof/</guid>
+      <description>&lt;h2 id=&#34;只运行一次&#34;&gt;只运行一次&lt;/h2&gt;
+&lt;p&gt;文档&lt;a href=&#34;https://pkg.go.dev/runtime/pprof&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://pkg.go.dev/runtime/pprof&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;使用test-bench&#34;&gt;使用test bench&lt;/h3&gt;
+&lt;p&gt;go test -cpuprofile cpu.prof -memprofile mem.prof -bench .&lt;/p&gt;
+&lt;h3 id=&#34;加入写文件代码&#34;&gt;加入写文件代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var cpuprofile = flag.String(&amp;quot;cpuprofile&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;write cpu profile to `file`&amp;quot;)
+var memprofile = flag.String(&amp;quot;memprofile&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;write memory profile to `file`&amp;quot;)
+
+func main() {
+    flag.Parse()
+    if *cpuprofile != &amp;quot;&amp;quot; {
+        f, err := os.Create(*cpuprofile)
+        if err != nil {
+            log.Fatal(&amp;quot;could not create CPU profile: &amp;quot;, err)
+        }
+        defer f.Close() // error handling omitted for example
+        if err := pprof.StartCPUProfile(f); err != nil {
+            log.Fatal(&amp;quot;could not start CPU profile: &amp;quot;, err)
+        }
+        defer pprof.StopCPUProfile()
+    }
+
+    // ... rest of the program ...
+
+    if *memprofile != &amp;quot;&amp;quot; {
+        f, err := os.Create(*memprofile)
+        if err != nil {
+            log.Fatal(&amp;quot;could not create memory profile: &amp;quot;, err)
+        }
+        defer f.Close() // error handling omitted for example
+        runtime.GC() // get up-to-date statistics
+        if err := pprof.WriteHeapProfile(f); err != nil {
+            log.Fatal(&amp;quot;could not write memory profile: &amp;quot;, err)
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;持续运行&#34;&gt;持续运行&lt;/h2&gt;
+&lt;p&gt;文档&lt;a href=&#34;https://pkg.go.dev/net/http/pprof&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://pkg.go.dev/net/http/pprof&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;添加以下代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import _ &amp;quot;net/http/pprof&amp;quot;
+go func() {
+	log.Println(http.ListenAndServe(&amp;quot;localhost:6060&amp;quot;, nil))
+}()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;地址：&lt;a href=&#34;http://localhost:6060/debug/pprof&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://localhost:6060/debug/pprof&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;pprof命令行&#34;&gt;pprof命令行&lt;/h2&gt;
+&lt;p&gt;官方文档&lt;a href=&#34;https://github.com/google/pprof/blob/main/doc/README.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/google/pprof/blob/main/doc/README.md&lt;/a&gt;
+中文文档&lt;a href=&#34;https://github.com/hyper0x/go_command_tutorial/blob/master/0.12.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/hyper0x/go_command_tutorial/blob/master/0.12.md&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;开启web&#34;&gt;开启web&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;go tool pprof -http=[host]:[port] [options] source&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;磁盘分析网络分析&#34;&gt;磁盘分析，网络分析&lt;/h2&gt;
+&lt;p&gt;目前没看到开源项目，分析程序内部磁盘和网络情况&lt;/p&gt;
+&lt;h2 id=&#34;bench&#34;&gt;bench&lt;/h2&gt;
+&lt;p&gt;go test -bench -cpuprofile xxx&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Model Code Gen Compare</title>
       <link>https://kurimi1.github.io/post/model-code-gen-compare/</link>
       <pubDate>Thu, 24 Mar 2022 13:41:54 +0800</pubDate>
       <guid>https://kurimi1.github.io/post/model-code-gen-compare/</guid>
-      <description>&lt;h2 id=&#34;go-zero&#34;&gt;go-zero&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;go-orm-集合&#34;&gt;go orm 集合&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/d-tsuji/awesome-go-orms&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/d-tsuji/awesome-go-orms&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;go-zero&#34;&gt;go-zero&lt;/h2&gt;
+&lt;p&gt;根据数据库或sql生成代码&lt;/p&gt;
+&lt;p&gt;对除mysql外不友好&lt;/p&gt;
+&lt;p&gt;有缓存代码&lt;/p&gt;
+&lt;p&gt;类sql模式&lt;/p&gt;
 &lt;h2 id=&#34;ent&#34;&gt;ent&lt;/h2&gt;
-&lt;h2 id=&#34;gorm&#34;&gt;gorm&lt;/h2&gt;
-&lt;h2 id=&#34;gorm2&#34;&gt;gorm2&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ent/ent&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/ent/ent&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;根据自定义的schame生成数据库和代码&lt;/p&gt;
+&lt;p&gt;文档好&lt;/p&gt;
+&lt;p&gt;有第三方缓存&lt;a href=&#34;https://github.com/ariga/entcache&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/ariga/entcache&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;go-gormgen&#34;&gt;go-gorm/gen&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/go-gorm/gen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/go-gorm/gen/&lt;/a&gt; 字节无恒实验室&lt;/p&gt;
+&lt;p&gt;根据数据库生成代码&lt;/p&gt;
+&lt;p&gt;文档太烂&lt;/p&gt;
+&lt;p&gt;没缓存&lt;/p&gt;
 &lt;h2 id=&#34;sqlc&#34;&gt;sqlc&lt;/h2&gt;
 &lt;h2 id=&#34;goframe&#34;&gt;goframe&lt;/h2&gt;
 </description>

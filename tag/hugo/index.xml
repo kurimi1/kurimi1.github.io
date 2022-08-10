@@ -19,6 +19,9 @@
       <guid>https://kurimi1.github.io/post/hugo/</guid>
       <description>&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
 &lt;p&gt;有些主题可能不支持，一定要下载extended版本。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;go install &amp;ndash;tags extended github.com/gohugoio/hugo@latest&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;本地预览命令&#34;&gt;本地预览命令&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;hugo server &amp;ndash;bind 0.0.0.0 -D&lt;/p&gt;

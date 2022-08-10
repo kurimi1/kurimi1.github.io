@@ -4,21 +4,27 @@
   
   
   <url>
-    <loc></loc><lastmod>2022-06-08T03:44:18+00:00</lastmod><changefreq>weekly</changefreq></url>
+    <loc></loc><lastmod>2022-07-21T02:30:58+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://kurimi1.github.io/categories/</loc><lastmod>2022-06-08T03:44:18+00:00</lastmod><changefreq>weekly</changefreq></url>
+    <loc>https://kurimi1.github.io/categories/</loc><lastmod>2022-07-21T02:30:58+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://kurimi1.github.io/</loc><lastmod>2022-07-21T02:30:58+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc></loc><lastmod>2022-07-21T02:30:58+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://kurimi1.github.io/category/go/</loc><lastmod>2022-07-21T02:30:58+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://kurimi1.github.io/post/go-pprof/</loc><lastmod>2022-07-21T02:30:58+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://kurimi1.github.io/post/</loc><lastmod>2022-07-21T02:30:58+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://kurimi1.github.io/tag/pprof/</loc><lastmod>2022-07-21T02:30:58+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://kurimi1.github.io/tags/</loc><lastmod>2022-07-21T02:30:58+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://kurimi1.github.io/tag/deploy/</loc><lastmod>2022-06-08T03:44:18+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://kurimi1.github.io/</loc><lastmod>2022-06-08T03:44:18+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc></loc><lastmod>2022-06-08T03:44:18+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
     <loc>https://kurimi1.github.io/post/pack-backend-frontend-in-a-docker/</loc><lastmod>2022-06-08T03:44:18+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://kurimi1.github.io/post/</loc><lastmod>2022-06-08T03:44:18+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://kurimi1.github.io/tags/</loc><lastmod>2022-06-08T03:44:18+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://kurimi1.github.io/category/%E6%80%BB%E7%BB%93/</loc><lastmod>2022-06-08T03:44:18+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -27,8 +33,6 @@
     <loc>https://kurimi1.github.io/tag/database/</loc><lastmod>2022-03-24T13:41:54+08:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://kurimi1.github.io/tag/go/</loc><lastmod>2022-03-24T13:41:54+08:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://kurimi1.github.io/category/go/</loc><lastmod>2022-03-24T13:41:54+08:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://kurimi1.github.io/tag/model/</loc><lastmod>2022-03-24T13:41:54+08:00</lastmod><changefreq>weekly</changefreq></url>
   <url>

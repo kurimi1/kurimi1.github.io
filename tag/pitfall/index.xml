@@ -22,6 +22,42 @@
 &lt;li&gt;常用的interface接口&lt;/li&gt;
 &lt;li&gt;利用反射reflect判断struct的name(或者直接获取xxx.(type))&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h2 id=&#34;限制并发&#34;&gt;限制并发&lt;/h2&gt;
+&lt;p&gt;分为以下2个方面，最佳实践为协程数量&amp;gt;并发数量，通常起多少个协程就代表进行多少并发，因为go本身还有其他协程，因此协程数&amp;gt;并发数。&lt;/p&gt;
+&lt;h3 id=&#34;限制创建协程数量&#34;&gt;限制创建协程数量&lt;/h3&gt;
+&lt;p&gt;limiter在协程创建之前&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;limiter &amp;lt;- struct{}{}
+go func
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;限制协程并发数量&#34;&gt;限制协程并发数量&lt;/h3&gt;
+&lt;p&gt;limiter在协程之中&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;go func () {
+    limiter &amp;lt;- struct{}{}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;释放limiter&#34;&gt;释放limiter&lt;/h3&gt;
+&lt;p&gt;建议使用defer释放，当协程panic后保障释放&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;go func () {
+    defer func (){
+        &amp;lt;-limiter
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;waitgroup&#34;&gt;waitgroup&lt;/h2&gt;
+&lt;p&gt;wg.add()必须在协程前添加&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;wg.Add(1)
+go func () 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果在协程能add，会造成协程还没add，wait就先执行就直接退出了&lt;/p&gt;
+&lt;h2 id=&#34;从chan中动态起协程仅适用于不需要退出的场景&#34;&gt;从chan中动态起协程，仅适用于不需要退出的场景&lt;/h2&gt;
+&lt;p&gt;不能使用waitgroup，因为协程是动态增减的，会在某个瞬间为0
+for chan里不能使用wg&lt;/p&gt;
+&lt;p&gt;优点：不需要初始化协程数量，节约内存
+缺点：无法使用wg，无法确定所有协程结束时间&lt;/p&gt;
+&lt;h2 id=&#34;pcre正则比标准库快1倍多&#34;&gt;pcre正则比标准库快1倍多&lt;/h2&gt;
+&lt;p&gt;rust nim最快，可以使用cgo调用&lt;/p&gt;
+&lt;h2 id=&#34;程序并发设置&#34;&gt;程序并发设置&lt;/h2&gt;
+&lt;p&gt;如果是多任务，直接给任务设置并发，任务内没必要再并发&lt;/p&gt;
 </description>
     </item>
     

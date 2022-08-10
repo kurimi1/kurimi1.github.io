@@ -21,6 +21,21 @@
 &lt;blockquote&gt;
 &lt;p&gt;go test -v -test.run xxxx&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;使用正则指定&lt;/p&gt;
+&lt;p&gt;go test -run ^xxx&amp;amp;&lt;/p&gt;
+&lt;h2 id=&#34;基准测试&#34;&gt;基准测试&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;go test -benchmem -run=^&amp;amp; -bench ^xxx$
+必须使用-run=^&amp;amp;才能指定测试某个基准测试，否在单测基测都会执行&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;并发基准测试&#34;&gt;并发基准测试&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;b.Setparallelism(2) // 设置并发数量2x核心数
+b.Runparallel(func(pb *testing.PB) {
+    for pb.Next() {
+        xx()
+    }
+})
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
